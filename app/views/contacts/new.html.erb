@@ -1,0 +1,44 @@
+<div id="contact-form">
+  <div class="left">
+    <h1>Get in Touch</h1>
+
+    <p class="italic">For more information, to book or to find out more about our range of physiotherapy solutions and treatments, please get in touch via:</p>
+
+    <hr />
+
+    <% unless SITE_SETTINGS["Leeds Address"].blank? %>
+      <div class="address">
+      <% address_lines = SITE_SETTINGS["Leeds Address"].split(",") %>
+      Visit: <br />
+      <div class="right contact-right">
+      <% address_lines.each do |address_line| %>
+        <strong><%= address_line %></strong><br />
+      <% end %>
+      </div>
+      <div class="clear"></div>
+      </div>
+    <% end %>
+
+    <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
+      <div class="contact">Tel: <span class="calltracks_physiotherapyinleedscouk-main"><%= SITE_SETTINGS["Leeds Phone"] %></span></div>
+    <% end %>
+
+    <% unless SITE_SETTINGS["Leeds Fax"].blank? %>
+      <div class="contact">Fax: <span><%= SITE_SETTINGS["Leeds Fax"] %></span></div>
+    <% end %>
+
+    <% unless SITE_SETTINGS["Email"].blank? %>
+      <div class="contact">Email: <span><%= mail_to SITE_SETTINGS["Email"] %></span></div>
+    <% end %>
+  </div>
+
+  <div class="form-right">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    <% end %>
+    
+    <%= render "form" %>
+  </div>
+  <div class="clear"></div>
+</div>
+

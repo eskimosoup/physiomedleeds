@@ -1,0 +1,917 @@
+@import "variables";
+
+.tablet-hidden, .tablet-only {
+  display: none !important;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  #slider .right {
+    top: -28px;
+  }
+  
+  .page .page-right {
+    img {
+      top: -95px;
+    }
+    .item {
+      top: -8px;
+    }
+  }
+	#header .header-telephone {
+		right: 10px;
+	}
+}
+
+/***** Tablet (Smaller than 959px) *****/
+@media only screen and (min-device-width: 768px) and (max-device-width: 959px) and (orientation : portrait) {
+	#header .header-telephone {
+		right: 10px;
+	}
+	
+  body.internal {
+    background: #f0ebe6 image-url('/assets/bg-internal.jpg') repeat-x 0 0;
+  }
+  
+	#header, .main_container, #slider {
+    width: 100%;
+  }
+  
+  .main_container {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  .know-your-body-instructions {
+    display: none;
+  }
+  
+  #intro-area .full {
+    width: 96%;
+    padding: 0 2%;
+    margin-top: 26px;
+  }
+  
+  #nav ul li a {
+    padding: 2px 1px;
+  }
+  
+  #footer {
+    margin-top: 30px;
+    width: 100%;
+    
+    .green-header {
+      position: relative;
+      top: -58px;
+    }
+    
+    .item .item-inner, #footer .footer-bar {
+      height: 99px;
+    }
+    
+    ul.details {
+      padding: 10px 0;
+      margin-top: -56px;
+    }
+    
+    ul.details li {
+      margin-right: 0;
+    }
+    
+    .footer-bar, .footer-bar a {
+      color: #666;
+    }
+  }
+  
+  .item {
+    width: 30%;
+  }
+  
+  #map-footer {
+    width: 93%;
+  }
+  
+  .page {
+    padding-top: 0;
+    
+    .page-left {
+      margin: 5% 1% 0 0;
+      width: 18%;
+      padding-left: 0.4%;
+    }
+    
+    .middle-inner h1 {
+      font-size: 1.9em;
+      line-height: 1.1;
+    }
+    
+    .middle-inner img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .page-left .quote {
+      display: block;
+      font-size: 1em;
+      margin-top: 60px;
+    }
+    
+    .page-left .quote .close {
+      right: -120px;
+    }
+    
+    .page-middle {
+      width: 52%;
+      margin: 0 1% 0 0;
+      float: left;
+    }
+    
+    .page-wide {
+      width: 72%;
+    margin: -10px 1% 0 .5%;
+    }
+    
+    .middle-inner {
+      padding: 10px 8px;
+    }
+    
+    .page-right {
+      width: 11%;
+      margin-top: 68px;
+    }
+    
+    .page-right img:first-of-type {
+      
+    }
+    
+    .page-right img.body-part-image {
+      left: 0;
+    }
+    
+    .page-right .item {
+      margin: 0;
+      z-index: 100;
+      float: none;
+      top: -129px;
+    }
+    
+    .page-right .green-header, .page-right .blue-header {
+      width: 100%;
+    }
+    
+    .no-top-margin {
+      margin-top: 0;
+    }
+    
+    .map {
+      overflow: hidden;
+    }
+    
+    .page-right.find-a-physio {
+      width: 14%;
+      
+    }
+  }
+  
+  .quote br {
+    display: none;
+  }
+  
+  .page .page-wide.map {
+    width: 70%;
+    
+  }
+  
+  .item .item-inner {
+    .left {
+      width: 47%;
+      margin-right: 2%;
+    }
+    
+    .icon-button {
+      width: 26px;
+    }
+    
+    .blue-button {
+      bottom: 3px;
+    }
+  }
+  
+  .blue-box {
+    margin-left: 0;
+    margin-top: -100px;
+  }
+  
+  .page-right .quote {
+    margin: -100px 0 130px 0;
+    width: 214%;
+  }
+  
+  #full-body {
+    display: none;
+  }
+  
+  #body-thumbs {
+    display: block;
+  }
+  
+  .services li .service .textbox {
+    width: 43%;
+  }
+  
+  #slider {
+    .left {
+      margin-left: 1%;
+    }
+    .left h1 {
+      font-size: 1.6em;
+    }
+    
+    p {
+      font-size: 0.8em;
+    }
+  
+    .right {
+      width: 50%;
+    }
+    
+    .right img {
+      width: 100%;
+      border-bottom: 1px solid #e1dcd2;
+    }
+    
+    .right-desktop {
+      display: none;
+    }
+    
+    .right-tablet.hidden {
+      display: block;
+    }
+  }
+  
+  #footer ul.details li a h2 {
+    font-size: 1em;
+  }
+  
+  .what-we-do p {
+    max-width: 119px;
+  }
+  
+  .item .find-a-physio.item-inner p {
+    max-width: 100px;
+    margin: 0px 0;
+  }
+  
+  .item .get-in-touch.item-inner p {
+    margin: 1px 0;
+  }
+  
+  .page.background.no-top-padding {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .services li .service h1 {
+    font-size: 1.4em;
+  }
+  
+  .services li.odd .service .textbox {
+    margin-right: -15px;
+  }
+  
+  #map-canvas {
+    width: 98%;
+  }
+  
+  .page .page-right.find-a-physio {
+    margin-top: 64px;
+  }
+  
+  .page .page-right.find-a-physio .quote {
+    margin-bottom: 0;
+  }
+  
+  #appointment {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  
+  #map .map-item {
+    width: 59%;
+    margin: 32px 0 32px 59px;
+  }
+  
+  #map .title h2 {
+    font-size: 1em;
+  }
+  
+  #map {
+    padding: 14px 2%;
+    width: 104%;
+  }
+  
+  #contact-form .form-right {
+    width: 54%;
+    margin-top: 2px;
+  }
+  
+  #map-footer .main_container, #home .main_container {
+    overflow: visible;
+  }
+  
+  #footer .footer-left {
+    margin-left: 1%
+  }
+  
+  #slider .left hr {
+    display: none;
+  }
+  #slider .details {
+    width: 120%;
+  }
+  #slider .details .green-button {
+    float: none;
+  }
+  .slide .details strong {
+    font-size: 0.8em;
+  }
+  #footer {
+    padding-bottom: 0
+  }
+  
+  .details {
+    margin: 40px 0 0 0;
+    
+    a {
+      margin: 10px 0;
+    }
+    
+  }
+  
+  #header {
+    padding-left: 1%;
+  }
+  
+  .page .page-right img {
+    top: -95px;
+  }
+  
+  .blue-box, #appointment {
+    width: 175px;
+  }
+  
+  #contact-drop {
+    display: none !important;
+  }
+  
+  #contact-form .left {
+    padding-left: 1%;
+  }
+  
+  .hq-left {
+    max-width: 50%;
+  }
+  
+  #footer .footer-bar .right {
+    width: auto;
+  }
+}
+
+/***** Phone (portrait 300px) *****/
+@media only screen and (max-device-width: 767px) {
+	
+  body.internal {
+    background: #f0ebe6 image-url('/assets/bg.jpg') repeat-x 0 0;
+  }
+  
+  body {
+    background: #fff;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+  }
+  
+  .main_container {
+    width: 96%;
+    padding: 2%;
+  }
+  
+  #header {
+    /*border-bottom: 1px solid #73a528;*/
+    width: 96%;
+    padding: 0 2%;
+    margin: 0;
+  }
+  
+  #slider {
+    padding: 0;
+    width: 96%;
+    padding: 2%;
+    height: auto;
+    
+    .slide {
+      height: auto;
+    }
+    
+    .left {
+      margin-top: 0;
+      display: block;
+      width: 100%;
+    }
+    
+    .right {
+      display: none;
+    }
+    
+    .slider-controls {
+      right: 0;
+			margin: 20px;
+    }
+    
+    .details .green-button {
+      float: none;
+    }
+  }
+  
+  #footer {
+    padding: 3px 0 100px 0;
+    
+    ul.details {
+      padding: 5px;
+    }
+    
+    ul.details li {
+      width: 96%;
+      padding: 2%;
+      float: none;
+      margin-top: 0;
+      border-right: 0;      
+    }
+    
+    ul.details li a h2, ul.details li a span {
+      //padding: 0 10px 0 25px;
+      padding: 6px 0 20px 25px;
+      margin-top: -7px;
+      font-size: 0.8em;
+    }
+    
+    ul.details, .item .item-inner {
+      height: auto;
+    }
+    
+    .footer-left, .footer-right {
+      width: 96%;
+      padding: 2%;
+    }
+    
+    .footer-left, .footer-right, .footer-bar .left, .footer-bar .right {
+      float: none;
+    }
+    
+    .footer-bar {
+      padding: 6px;      
+    }
+    
+    .footer-bar .left {
+      display: none;
+    }
+
+    .footer-bar .right {
+      float: none;
+      width: 95%;
+      margin: 0;
+      text-align: left;
+      line-height: 1.5;
+    }
+    
+    .item, .item:last-of-type {
+      margin: 10px 0;
+      padding: 0;
+      width: 100%;
+      float: none;
+    }
+    
+    .item .blue-header, .item:last-of-type .blue-header {
+      width: auto;
+    }
+    
+    img {
+      margin: 0;
+    }
+    
+    .item .item-inner .blue-button {
+      bottom: 3px;
+    }
+  }
+  
+  #nav {
+    ul li {
+      float: none;
+      margin: 2px 0;
+    }
+    
+    ul li a {
+      float: none;
+      margin: 0;
+      border-top: 1px solid #78b432;      
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    ul li:last-of-type {
+      float: none;
+    }
+    
+    .right {
+      float: none;
+    }
+    
+    #contact-drop {
+      display: none !important; /* this is to override the jQuery */
+    }
+  }
+  
+  .page {
+    padding: 0;
+    
+    .page-left {
+      float: none;
+      width: 96%;
+      padding: 2%;
+    }
+    
+    .page-left .quote {
+      display: none;
+    }
+    
+    .page-middle {
+      float: none;
+      width: 96%;
+      padding: 2%;
+    }
+    
+    .page-middle, .middle-inner {
+      padding: 1%;
+      
+      h1, h2, h3, h4, h5, h6 {
+        margin: 5px 0;
+      }
+      
+      h1 {
+        font-size: 1.8em;
+      }
+      
+      h2 {
+        font-size: 1.6em;
+      }
+      
+      h3 {
+        font-size: 1.5em;
+      }
+      
+      h4 {
+        font-size: 1.4em;
+      }
+      
+      h5 {
+        font-size: 1.2em;
+      }
+      
+      h6 {
+        font-size: 1.1em;
+      }
+      
+      li {
+        font-size: 0.9em;
+        line-height: 1.7;
+        margin: 5px 0;
+      }
+      
+      img {
+        max-width: 100%;
+      }
+    }
+    
+    .page-wide {
+      width: 96%;
+      padding: 0;
+    }
+    
+    .page-right {
+      width: 96%;
+      padding: 2% 2% 2% 1%;
+    }
+    
+    .page-right .item {
+      width: 94%;
+      position: static;
+      margin: 0;
+    }
+    
+    .page-right img {
+      max-width: 100%;
+      position: static;
+    }
+    
+    .page-right .item .item-inner {
+      width: 101%;
+    }
+    
+    .page-right img:first-of-type {
+      display: none;
+    }
+  
+    .no-top-margin, .no-visual, .page-wide {
+      margin-top: -4px;
+    }
+    
+    .find-a-physio {
+      margin-top: 0;
+    }
+  }  
+  
+  #contact-form {
+    .left {
+      width: 100%;
+      margin-top: 0;
+    }
+    
+    .right {
+      width: 82%;
+    }
+  }
+  
+  .blue-header {
+    width: 96%;
+  }
+  
+  #map-footer {
+    padding: 33px 0 0 0;
+  }
+  
+  .mobile-only {
+    display: inline;
+  }
+  
+  .mobile-hidden, .top {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    padding: 0;
+  }
+  
+  #intro-area, #intro-area .full {
+    margin-top: 0;
+    
+    h1 {
+      font-size: 1.8em;
+    }
+    
+    h2 {
+      font-size: 1.6em;
+    }
+    
+    h3 {
+      font-size: 1.5em;
+    }
+    
+    h4 {
+      font-size: 1.4em;
+    }
+    
+    h5 {
+      font-size: 1.2em;
+    }
+    
+    h6 {
+      font-size: 1.1em;
+    }
+    
+    .left {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+    
+  .services {
+    padding: 0;
+    margin-top: 10px;
+    height: auto;
+    
+    li.odd .service .textbox {
+      float: none;
+    }
+    
+    li .info {
+      width: auto;
+      margin: 10px 0px;
+    }
+    
+    li .service {
+      height: auto;
+      width: 86%;
+      padding: 21px 20px 20px 18px;
+      
+      h1 {
+        font-size: 1.2em;
+      }
+      
+      .textbox {
+        width: auto;
+      }
+    }
+    
+    img {
+      display: none;
+    }
+  }
+  
+  .list-item {
+    padding: 0;
+    
+    img {
+      float: none;
+    }
+  }
+  
+  .body-part {
+    height: auto;
+    border: 0;
+    
+    img {
+      float: none;
+      border: 1px dotted #ccc;
+    }
+    
+    .part-title {
+      margin: 0;
+    }
+    
+    .part-read-more {
+      width: 222px;
+    }
+  }
+  
+  .contact {
+    margin: 10px 0;
+    font-size: .95em;
+    
+    span {
+      width: 83%;
+    }
+  }
+  
+  
+  .new_contact {
+    width: 96%;
+    padding: 2%;
+    margin: 11% 0;
+    
+    label {
+      width: 100%;
+    }
+    
+    input[type='text'], textarea {
+      width: 96%;
+    }
+    
+    .actions {
+      margin: 11px 0 25px 0;
+    }
+    
+    fieldset {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+  #map {
+    padding: 14px 0;
+    
+    .title {
+      width: 100%;
+      float: none;
+    }
+  }
+  
+  .new_practice_application {    
+    .actions {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    
+    fieldset {
+      padding: 1%;
+    }
+    
+    .field {
+      width: 48%;
+      float: left;
+    }
+    
+    input, select, textarea {
+      width: 83%;
+    }
+    
+    label {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  .quote {
+    margin: 20px 0 0 0;
+  }
+  
+  p .green-button, p .blue-button {
+    display: inline-block;
+  }
+  
+  .find-a-practice-map {
+    width: 90%;
+    height: 289px;
+  }
+  
+  .contact-map {
+    width: 86%;
+    height: 270px;
+    margin: 15px 0 5px 0;
+  }
+  
+  .mobile-menu {
+    margin-top: 36px;
+  }
+  
+  .quote .close {
+    left: 90%;
+  }
+  
+  .know-your-body-teaser {
+    padding: 0 11px;
+    margin: 10px 0;
+  }
+  
+  .mobile-only.key-facts {
+    margin-top: 40px;
+    display: block;
+  }
+  
+  .hq-right {
+    float: left;
+  }
+  
+  .know-your-body-instructions {
+    display: none;
+  }
+  
+  #contact-form .form-right {
+    width: auto;
+    border-left: 0;
+    margin-top: -10px;
+    float: right;
+    background: #fff;
+    border-left: 1px solid #fff;
+  }
+  
+  .green-header .arrow, .blue-header .arrow {
+    z-index: 3;
+  }
+	
+	#header .header-telephone {
+		position: static;
+		margin: 10px 0;
+	}
+	
+	.home-page .page {
+		float: none;
+		width: 80%;
+	}
+	
+	.clinic-name {
+		margin-top: 10px;
+	}
+	
+	#nav ul li.right {
+		float: none;
+	}
+	
+	.team-member {
+		position: static;
+		width: 80%;
+	}
+	
+	.team-member .green-button {
+		position: static;
+	}
+	
+	.location {
+		width: 80%;
+		margin: 0 6% 10px 6%;
+	}
+}	 
+
+/***** Phone (landscape 420px) *****/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}

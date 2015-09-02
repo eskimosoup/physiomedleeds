@@ -1,0 +1,59 @@
+<div class="page">
+  <div class="page-wide no-top-margin">
+    <div class="middle-inner">
+      <h1>News</h1>
+      <% unless @articles.blank? %>
+        <% @articles.each do |article| %>
+          <div class="list-item">
+            <% unless article.image.blank? %>
+              <%= link_to (image_tag article.image.index, {:alt => article.image_alt}), article %>
+            <% end %>      
+      
+            <h2><%= link_to article.title, article %></h2>
+      
+            <p><%= truncate article.summary, :length => 200 %> <%= link_to "Read More", article, :class => 'read-more' %></p>
+      
+            <div class="release italic">News release: <%= l article.date, :format => :news %></div>
+      
+            <hr />
+          </div>
+        <% end %>
+	<%= paginate @articles %>
+      <% else %>
+        We currently have no articles to display
+      <% end %>
+        <p>
+					<strong>Want to see how we can help you?</strong> <%= link_to "Get in Touch", new_contact_path, :class =>"green-button" %>
+        </p>      
+        
+        <div>
+          <%= render "shared/social_links" %>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="page-right">
+    <%= image_tag 'page-side-wrist.jpg' %>
+    
+    <%= render "shared/no_visual_right_side_contact" %>
+    
+    <% unless @testimonials.blank? %>
+      <div class="quote">
+        <% @testimonials.each do |testimonial| %>
+        <span class="open"></span>
+
+          <p><%= testimonial.content %></p>
+
+        <span class="close"></span>
+        <% end %>
+      </div>
+    <% end %>
+      
+  </div>
+  
+  
+
+  <div class="clear"></div>
+</div>
+

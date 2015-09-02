@@ -1,0 +1,89 @@
+<div class="page">
+  <div class="page-left">
+    <% unless @root.blank? or @root.children.order(:position).blank? %>
+      <div class="green-header">
+        <h2>Explore</h2>
+        <span class="arrow"> </span>
+      </div>
+
+      <ul class="side-nav">
+      <% @root.children.each do |branch| %>
+        <li>
+          <%= link_to branch.name, branch.destination %>
+        </li>
+      <% end %>
+      </ul>
+    <% end %>
+    
+    <!-- 
+    <% unless @page.title == "About Us" %>
+    <% else %>
+      <div class="quote">
+        <span class="open"></span>
+      
+        <p>I have just read the latest scores from the survey of users of the physio service you provide to DWP and felt I had to write to congratulate you on the 96% approval rating. - Department for Work &amp; Pensions</p>
+      
+        <span class="close"></span>
+      </div>
+    <% end %>
+    -->
+
+    <% unless @testimonials.blank? %>
+      <div class="quote">
+        <% @testimonials.each do |testimonial| %>
+        <span class="open"></span>
+
+          <p><%= testimonial.content %></p>
+
+        <span class="close"></span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="page-middle">
+    <div class="middle-inner">
+      <h1><%= @page.title %></h1>
+      
+      <%= raw @page.content %>
+
+      <%= image_tag(@page.image.show, :title => @page.name, :alt => @page.name) unless @page.image.show.blank? %>
+
+      <%= render "shared/social_links" %>
+    </div>
+  </div>
+
+  <div class="page-right">
+    <!--
+    <% unless @page.title == "About Us" %>
+      <%= render "shared/right_side_contact" %>
+    <% else %>
+      <%= render "shared/no_quote_right_side_contact" %>
+      <div class="crosslink mobile-hidden blue-box" id="case-studies">
+        <a href="/case-studies" title="Case Studies">
+        
+        <div>
+          <h2>Case Studies</h2>
+          <hr />
+          <p>Read <strong>success stories</strong> from existing Physiomed clients.</p>
+        </div>
+        
+        <span class="arrow"></span>
+        </a>
+      </div>
+    <% end %>
+  </div>
+  -->
+    <%= render "shared/no_quote_right_side_contact" %>
+
+
+    <div class="page-news-article mobile-hidden">
+      <h5>Latest News</h5>
+      <% @side_articles.each do |article| %>
+        <span><%= l article.date %></span><br/>
+        <h6><%= link_to article.title, article %></h6>
+      <% end %>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

@@ -1,0 +1,55 @@
+<div class="page">
+  <div class="page-wide">
+    <div class="middle-inner">
+      <h1>About the Team</h1>
+      
+      <% @team_members.each_with_index do |team_member, index| %>
+        <div class="team-member">
+            <% unless team_member.image.blank? %>
+              <%= link_to ( image_tag team_member.image.show, alt: team_member.name ), "#team-#{ index }", class: 'area-toggle' %>
+            <% end %>
+            
+            <h2>
+              <%= link_to "#team-#{ index }", class: 'area-toggle' do %>
+              <% name = team_member.name.split(',') %>
+              <%= name[0] %><br />
+              <%= name[1] %>
+              <br />            
+              <%= team_member.qualification %>
+              <% end %>
+            </h2>
+            
+            <p>
+              <strong>
+                <%= team_member.role %>
+                </strong>
+            </p>
+            
+            <a class="green-button area-toggle" href="#team-<%= index %>">Read More</a>            
+            
+            <div class="info hidden" id="team-<%= index %>">
+              <%= raw team_member.bio %>
+              
+              
+            
+            <hr />
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="page-right">
+    <%= render "shared/no_quote_right_side_contact" %>
+
+
+    <div class="page-news-article mobile-hidden">
+      <h5>Latest News</h5>
+      <% @side_articles.each do |article| %>
+        <span><%= l article.date %></span><br/>
+        <h6><%= link_to article.title, article %></h6>
+      <% end %>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

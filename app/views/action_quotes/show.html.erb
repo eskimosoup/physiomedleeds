@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @action_quote.content %>
+</p>
+
+<p>
+  <b>Display:</b>
+  <%= @action_quote.display %>
+</p>
+
+
+<%= link_to 'Edit', edit_action_quote_path(@action_quote) %> |
+<%= link_to 'Back', action_quotes_path %>

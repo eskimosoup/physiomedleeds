@@ -1,0 +1,18 @@
+
+  <div class="item">
+      <div class="blue-header">
+        <h2>Get in Touch</h2>
+        <span class="arrow"></span>
+      </div>
+  
+      <div class="item-inner">
+        <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
+        Call us on:
+        <h2><span class="calltracks_physiotherapyinleedscouk-main"><%= SITE_SETTINGS["Leeds Phone"] %></span></h2>
+        <% end %>
+  
+        <% unless SITE_SETTINGS["Email"].blank? %>
+          <p>Or email: <%= mail_to SITE_SETTINGS["Email"], "Customer Services" %></p>
+        <% end %>
+      </div>
+  </div>

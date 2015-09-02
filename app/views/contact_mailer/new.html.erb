@@ -1,0 +1,32 @@
+<html lang="en">
+  <body>
+    <h2>Contact Details</h2>
+
+    <p>
+      <strong>Name:</strong>
+      <br />
+      <%= @contact.name %>
+    </p>
+
+    <p>
+      <strong>Contact Number:</strong>
+      <br />
+      <%= @contact.contact_number %>
+    </p>
+
+    <% unless @contact.email.blank? %>
+      <p>
+        <strong>Email:</strong>
+        <br />
+        <%= mail_to(@contact.email) %>
+      </p>
+    <% end %>
+
+    <p>
+      <strong>Message:</strong>
+      <br />
+      <%= @contact.message %>
+    </p>
+
+  </body>
+</html>

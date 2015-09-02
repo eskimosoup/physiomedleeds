@@ -1,0 +1,16 @@
+<% if @seo_entry and @seo_entry.valid_rich_snippet? %>
+  <div itemscope itemtype="http://data-vocabulary.org/Review-aggregate">
+    <span itemprop="itemreviewed"><%= @seo_entry.item_reviewed %></span>
+    
+    <%= image_tag "rich-snippets/#{@seo_entry.rating}.png", style: "display: block;float:none;margin-bottom:2px;" %>
+    
+      <span itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating">
+        <span itemprop="average"><%= @seo_entry.rating %></span>        
+        out of <span itemprop="best"><%= @seo_entry.max_rating %></span>
+      </span>
+      
+      based on
+      
+      <span itemprop="votes"><%= @seo_entry.number_of_reviews %></span> ratings.
+  </div>
+<% end %>

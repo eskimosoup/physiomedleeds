@@ -1,0 +1,10 @@
+<% title Testimonial.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ Testimonial.model_name.human }", new_admin_testimonial_path %>
+</div>
+
+<%= informant_table @testimonials, {
+      :headings => [ '', 'Author', 'Content', 'Display', '', '' ],
+      :body => [ it_sort, :author, :content, it_ajax_toggle(:display), it_edit, it_destroy ]
+    } %>

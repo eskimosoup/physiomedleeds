@@ -1,0 +1,25 @@
+<h1>Listing action_quotes</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Display</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @action_quotes.each do |action_quote| %>
+  <tr>
+    <td><%= action_quote.content %></td>
+    <td><%= action_quote.display %></td>
+    <td><%= link_to 'Show', action_quote %></td>
+    <td><%= link_to 'Edit', edit_action_quote_path(action_quote) %></td>
+    <td><%= link_to 'Destroy', action_quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Action quote', new_action_quote_path %>

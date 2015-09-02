@@ -1,0 +1,10 @@
+<% title ActionQuote.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ ActionQuote.model_name.human }", new_admin_action_quote_path %>
+</div>
+
+<%= informant_table @action_quotes, {
+      :headings => [ 'Content', 'Display', '', '' ], 
+      :body => [ it_shorten(:content), it_ajax_toggle(:display), it_edit, it_destroy ]
+    } %>

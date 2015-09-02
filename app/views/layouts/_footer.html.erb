@@ -1,0 +1,81 @@
+<% unless @action_quote.blank? %>
+<div class="action-quote">
+  <%= image_tag "large-open-quote.png", alt: '', class: "float-left" %>
+  
+  <p><%= @action_quote.content %></p>
+  
+  <%= image_tag "large-close-quote.png", alt: '', class: "float-right" %>
+</div>
+<% end %>
+
+<div id="footer">
+  <div class="footer-bar">
+    <div class="left">
+      <div class="left">
+        <p class="get-social">Get social with us!</p>
+        <%= link_to (image_tag "footer/twitter.png", :alt => "Twitter", :class => "social"), "https://twitter.com/physio_med", :title => "Twitter" %>
+        <%= link_to (image_tag "footer/linkedin.png", :alt => "LinkedIn", :class => "social"), "http://www.linkedin.com/company/physio-med-ltd", :title => "LinkedIn" %>
+        <%= link_to (image_tag "footer/facebook.png", :alt => "Facebook", :class => "social"), "https://www.facebook.com/pages/Physio-Med-Limited/1548528155362064", :title => "Facebook" %>
+      </div>
+      
+      <div class="rich-snippets">
+        <%= render 'shared/rich_snippets' %>
+      </div>
+    </div>
+
+    <div class="right">
+      <p>
+        &copy; 2013 Physio Med Limited
+      </p>
+
+      <p>
+        <!-- <%= link_to "Google+", "https://plus.google.com/116296764988965851161", :rel => "publisher" %> | -->
+        <%= link_to "Email Disclaimer", page_path("email-disclaimer") %> |
+        <%= link_to "Terms & Conditions", page_path("terms-conditions-of-use") %> |
+        <%= link_to "Privacy Policy", page_path("privacy-policy") %>
+      </p>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+
+  <div class="footer-left left">
+    <p>
+      All of our Physiotherapists are registered with the Health and Care Professional Council and meet their standards.
+      Our Physiotherapists are registered with the Chartered Society of Physiotherapy and meet their standards.
+    </p>
+  </div>
+
+  <ul class="footer-right right">
+    <li>
+      <%= link_to image_tag("footer/a.jpg", :alt => "Members of The Chartered Society of Physiotherapy (CSP)"),
+      "http://www.csp.org.uk/", {:class => "ir a", :rel => "external", :target => "_blank"} %>
+    </li>
+    <li>
+      <%= link_to image_tag("footer/b.jpg", :alt => "HCPC Registered"),
+      "http://www.hpc-uk.org/", {:class => "ir b", :rel => "external", :target => "_blank"} %>
+    </li>
+  </ul>
+</div>
+</div>
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 980947638;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/980947638/?value=0&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+<!-- Calltracker Code -->
+<script type="text/javascript" src="//lite.calltracks.com/calltracks_web_number_dynamics/loader.js"></script>

@@ -1,0 +1,217 @@
+@import "variables";
+
+#map-footer, #footer {
+  background: #f0ebe6;
+  padding-bottom: 200px;
+
+  .green-header {
+    position: relative;
+    top: -28px;
+  }
+
+  ul.details {
+    background: #fff;
+    margin-top: -26px;
+    *margin-top: -49px;
+    padding: 20px;
+    height: 90px;
+    border-bottom: 1px solid #e1dcd2;
+  }
+  
+  ul.details li {
+    float: left;
+    background: #fff;
+    width: 19%;
+    margin-top: 14px;
+    border-right: 1px dashed #e1dcd2;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-family: proxima-nova, Arial, Helvetica, sans-serif;
+    line-height: 1;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+    
+  ul.details li a {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  ul.details li a h2, ul.details li a span {
+    padding: 0 32px;
+    font-weight: normal;
+    font-size: 1.2em;
+    
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    
+    display: block;
+    
+    &:hover {
+      border-top: 1px solid #e1dcd2;
+      border-bottom: 1px solid #e1dcd2;
+    }
+  }
+  
+  ul.details li:last-of-type {
+    border-right: 0;
+  }
+  
+  ul.details .call {
+    background: image-url('/assets/icons/call.jpg') 0 0 no-repeat;
+  }
+  
+  ul.details .distance {
+    background: image-url('/assets/icons/distance.jpg') top left no-repeat;
+  }
+  
+  ul.details .practices {
+    background: image-url('/assets/icons/practices.jpg') top left no-repeat;
+  }
+  
+  ul.details .call-within {
+    background: image-url('/assets/icons/call-within.jpg') top left no-repeat;
+  }
+  
+  ul.details .assessment {
+    background: image-url('/assets/icons/assessment.jpg') top left no-repeat;
+  }
+
+  .footer-left {
+    width: 45%;
+    font-size: 0.750em;
+    margin: 20px 5% 20px 0;
+  }
+  
+  .footer-right {
+    margin: 20px 0;
+    text-align: right;
+  }
+  
+  .footer-right li {
+    float: left;
+  }
+
+  .footer-right .ir {
+    display: block;
+    height: 80px;
+    float: left;
+    background-repeat: no-repeat;
+    text-align: left;
+  }
+
+  .footer-right .a img {
+    display: block;
+    width: 65px;
+  }
+
+  .footer-right .b img {
+    display: block;
+    width: 83px;
+  }
+  
+  .footer-right .d img {
+    display: block;
+    width: 130px;
+  }
+
+  .footer-bar {
+    background: none #e1dcd2;
+    padding: 0 15px;
+    font-size: 0.875em;
+    line-height: 1.2;
+    padding: 10px;
+    color: #666;
+  }
+  
+  .footer-bar .left {
+    width: 45%;
+    margin-right: 5%;    
+  }
+  
+  .footer-bar .right {
+    width: 45%;
+    margin-left: 5%;
+    text-align: right;
+  }
+  
+  h5 {
+    font-family: "myriad-pro", Arial, sans-serif;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+  }
+  
+  img {
+    margin: 23px 9px 14px 0;
+    float: left;
+  }
+  
+  .footer-bar a {
+    color: #666;
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  .get-social {
+    margin: 0 0 2px 0;
+    font-size: 16px;
+  }
+  
+  .footer-bar .right {
+    margin-top: 21px;
+    line-height: 1.6;
+  }
+  
+  .footer-bar img {
+    margin: 0;
+  }
+  
+  .footer-bar .social {
+    margin: 0 4px 0 0;
+  }
+}
+
+#page-footer-bar {
+  text-align: right;
+}
+
+#map {
+  background: #fff;
+  padding: 14px;
+  margin-top: -27px;
+  width: 100%;
+  margin-bottom: 25px;
+
+  .title {
+    padding-left: 10px;
+    width: 25%;
+    float: left;
+  }
+  
+  h2 {
+    font-family: proxima-nova, Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+    background: image-url('/assets/icons/call.jpg') top left no-repeat;
+    padding: 0 0 20px 30px;
+  }
+
+  .title .blue-button, .green-button {
+    font-size: 0.9em;
+    width: 172px;
+    text-align: center;
+    display: block;
+  }
+
+  .map-item {
+    padding: 8px 20px;
+    float: left;
+    background: image-url('/assets/contact_bg.gif') top left repeat-y;
+  }
+}
+
+#map-footer {
+  padding-bottom: 0;
+}

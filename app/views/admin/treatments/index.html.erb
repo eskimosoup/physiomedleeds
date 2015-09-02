@@ -1,0 +1,10 @@
+<% title Treatment.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ Treatment.model_name.human }", new_admin_treatment_path %>
+</div>
+
+<%= informant_table @treatments, {
+      :headings => [ 'Position', 'Name', 'Image', 'Summary', 'Display', '', '' ], 
+      :body => [ it_sort, :name, it_edit_images(:image), it_shorten(:summary), it_ajax_toggle(:display), it_edit, it_destroy ]
+    } %>

@@ -1,0 +1,49 @@
+.page-champion {
+  width:200px;
+  background-color:#ffffff;
+  margin: 20px 0 0 21px;
+  padding:10px;
+  font-size:14px;
+  img {
+    display:block;
+    position: relative;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 1;
+  }
+  a {
+    text-decoration:none;
+  }
+  .name {
+    font-weight:bold;
+    color:#78b432;
+  }
+  .role {
+    font-weight:bold;
+  }
+  p {
+    font-size:12px;
+  }
+}
+
+.page-news-article {
+  margin-top:40px;
+  background-color:#ffffff;
+  width:200px;
+  margin: 20px 0 0 21px;
+  padding:10px;
+  font-size:14px;
+  h5 {
+    font-weight: bold;
+    color: #78b432;
+  }
+  h6 {
+    margin-bottom:10px;
+    font-size:14px;
+    line-height:14px;
+    a {
+      color: #666666 !important;
+      display:inline-block;
+    }
+  }
+}

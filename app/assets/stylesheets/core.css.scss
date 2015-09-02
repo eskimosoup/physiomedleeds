@@ -1,0 +1,72 @@
+/*--Main--*/
+body {
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size: 12px;
+	color: #333333; 
+}
+
+
+p {
+	margin: 0px; 
+	padding: 8px 0px 8px 0px;
+}
+
+
+hr {
+	border: 0px; 
+	border-bottom: 1px solid #333333; 
+	height: 0px; 
+	clear: left; 
+	margin: 0px 0px 10px 0px; 
+	padding: 10px 0px 0px 0px;
+}
+
+
+/*--Links--*/
+a {
+  color: #FF6633;
+	text-decoration: none;
+  &:visited, &:active {color: #FF6633;}
+	&:hover {color: #000000; text-decoration: underline;}
+}
+
+/*--Titles--*/
+
+h1 {
+	color: #333333; 
+	font-size: 28px; 
+	font-weight: normal; 
+	margin: 0px; 
+	padding: 0px;
+	line-height: normal;
+}
+
+h2 {
+	color: #333333; 
+	font-size: 18px; 
+	font-weight: normal; 
+	margin: 12px 0px 0px 0px; 
+	padding: 12px 0px 0px 0px;
+	line-height: normal;
+}
+
+h3 {
+	color: #333333; 
+	font-size: 14px; 
+	font-weight: normal; 
+	margin: 8px 0px 0px 0px; 
+	padding: 8px 0px 0px 0px;
+	line-height: normal;
+}
+
+
+/*--Image Styles--*/
+img.image-right {
+	float: right; 
+	margin: 4px 0px 8px 15px;
+}
+
+img.image-left {
+	float: left; 
+	margin: 4px 15px 8px 0px;
+}

@@ -1,0 +1,250 @@
+<h2>Main Details</h2>
+
+<table>
+  <tr>
+    <th align="left">Name</th>
+    <td align="left"><%= @practice_application.name %></td>
+  </tr>
+  <tr>
+    <th align="left">Address</th>
+    <td align="left"><%= @practice_application.address %></td>
+  </tr>
+  <tr>
+    <th align="left">County</th>
+    <td align="left"><%= @practice_application.county %></td>
+  </tr>
+  <tr>
+    <th align="left">Postcode</th>
+    <td align="left"><%= @practice_application.post_code %></td>
+  </tr>
+</table>
+
+<h2>Practice Contact Details</h2>
+
+<table>
+  <tr>
+    <th align="left">Phone</th>
+    <td align="left"><%= @practice_application.telephone %></td>
+  </tr>
+  <tr>
+    <th align="left">Fax</th>
+    <td align="left"><%= @practice_application.fax %></td>
+  </tr>
+  <tr>
+    <th align="left">Email</th>
+    <td align="left"><%= @practice_application.email %></td>
+  </tr>
+</table>
+
+<h2>Primary Contact(s) for Clinic</h2>
+
+<table>
+  <tr>
+    <th align="left">First Contact Name</th>
+    <td align="left"><%= @practice_application.first_contact_name %></td>
+  </tr>
+  <tr>
+    <th align="left">First Contact Position</th>
+    <td align="left"><%= @practice_application.first_contact_position %></td>
+  </tr>
+  <tr>
+    <th align="left">Second Contact Name</th>
+    <td align="left"><%= @practice_application.second_contact_name %></td>
+  </tr>
+  <tr>
+    <th align="left">Second Contact Position</th>
+    <td align="left"><%= @practice_application.second_contact_position %></td>
+  </tr>
+</table>
+
+<h2>Practice Details</h2>
+
+<h3>How many Physios do you have?</h3>
+
+<table>
+  <tr>
+    <th align="left">Full Time</th>
+    <td align="left"><%= @practice_application.full_time %></td>
+  </tr>
+  <tr>
+    <th align="left">Part Time</th>
+    <td align="left"><%= @practice_application.part_time %></td>
+  </tr>
+  <tr>
+    <th align="left">Male</th>
+    <td align="left"><%= @practice_application.male %></td>
+  </tr>
+  <tr>
+    <th align="left">Female</th>
+    <td align="left"><%= @practice_application.female %></td>
+  </tr>
+</table>
+
+<h3>What are your opening hours?</h3>
+
+<table>
+  <tr>
+    <th align="left">Monday</th>
+    <td align="left"><%= @practice_application.monday %></td>
+  </tr>
+  <tr>
+    <th align="left">Tuesday</th>
+    <td align="left"><%= @practice_application.tuesday %></td>
+  </tr>
+  <tr>
+    <th align="left">Wednesday</th>
+    <td align="left"><%= @practice_application.wednesday %></td>
+  </tr>
+  <tr>
+    <th align="left">Thursday</th>
+    <td align="left"><%= @practice_application.thursday %></td>
+  </tr>
+  <tr>
+    <th align="left">Friday</th>
+    <td align="left"><%= @practice_application.friday %></td>
+  </tr>
+</table>
+
+<h3>Additional required information</h3>
+
+<table>
+  <tr>
+    <th align="left">Locations</th>
+    <td align="left"><%= @practice_application.number_of_locations %></td>
+  </tr>
+  <tr>
+    <th align="left">Receptionist</th>
+    <td align="left"><%= @practice_application.receptionist? ? "Yes" : "No" %></td>
+  </tr>
+  <tr>
+    <th align="left">Parking</th>
+    <td align="left"><%= @practice_application.parking_facilities? ? "Yes" : "No" %></td>
+  </tr>
+  <tr>
+    <th align="left">Established</th>
+    <td align="left"><%= @practice_application.established %></td>
+  </tr>
+  <tr>
+    <th align="left">Word Access</th>
+    <td align="left"><%= @practice_application.word_access? ? "Yes" : "No" %></td>
+  </tr>
+  <tr>
+    <th align="left">Cancellation Policy</th>
+    <td align="left"><%= @practice_application.cancellation_policy %></td>
+  </tr>
+  <tr>
+    <th align="left">Cheques Payable To</th>
+    <td align="left"><%= @practice_application.cheques_payable_to %></td>
+  </tr>
+  <tr>
+    <th align="left">Description</th>
+    <td align="left"><%= @practice_application.description %></td>
+  </tr>
+</table>
+
+<h2>Insurance Policies</h2>
+
+<table>
+  <tr>
+    <th align="left">Public Liability Insurance</th>
+    <td align="left"><%= @practice_application.public_liability_insurance? ? "Yes" : "No" %></td>
+  </tr>
+  <tr>
+    <th align="left">Employee Liability Insurance</th>
+    <td align="left"><%= @practice_application.employee_liability_insurance? ? "Yes" : "No" %></td>
+  </tr>
+</table>
+
+<h2>Treatment Information</h2>
+
+<table>
+  <tr>
+    <th align="left">Treatment Rooms</th>
+    <td align="left"><%= @practice_application.treatment_rooms %></td>
+  </tr>
+  <tr>
+    <th align="left">Treatment Minimum Time</th>
+    <td align="left"><%=  @practice_application.treatment_min_time %></td>
+  </tr>
+</table>
+
+<h2>Treatment Costs</h2>
+
+<table>
+  <tr>
+    <th align="left">Initial Cost</th>
+    <td align="left"><%= @practice_application.initial_assessment_cost %></td>
+  </tr>
+  <tr>
+    <th align="left">Subsequent Cost</th>
+    <td align="left"><%= @practice_application.subsequent_treatment_cost %></td>
+  </tr>
+</table>
+
+<% unless @practice_application.practitioners.blank? %>
+  <h2>Practitioners</h2>
+  <% @practice_application.practitioners.each do |practitioner| %>
+    <div class="practitioner">
+      <table>
+        <tr>
+          <th align="left">Name</th>
+          <td align="left"><%= practitioner.name %></td>
+        </tr>
+        <tr>
+          <th align="left">CSP Number</th>
+          <td align="left"><%= practitioner.csp_number %></td>
+        </tr>
+        <tr>
+          <th align="left">HPC Number</th>
+          <td align="left"><%= practitioner.hpc_number %></td>
+        </tr>
+        <tr>
+          <th align="left">OCPPP Member</th>
+          <td align="left"><%= practitioner.ocppp_member? ? "Yes" : "No"  %></td>
+        </tr>
+        <tr>
+          <th align="left">Qualification Date</th>
+          <td align="left"><%= practitioner.qualification_date %></td>
+        </tr>
+        <tr>
+          <th align="left">Years Practicing</th>
+          <td align="left"><%= practitioner.years_practicing %></td>
+        </tr>
+        <tr>
+          <th align="left">Specialisation Areas</th>
+          <td align="left"><%= practitioner.specialisation_areas %></td>
+        </tr>
+        <tr>
+          <th align="left">Domilicary Visits</th>
+          <td align="left"><%= practitioner.domiciliary_visits? ? "Yes" : "No"  %></td>
+        </tr>
+        <tr>
+          <th align="left">Manual Treatments</th>
+          <td align="left"><%= practitioner.manual_treatments %></td>
+        </tr>
+        <tr>
+          <th align="left">BUPA Registered</th>
+          <td align="left"><%= practitioner.bupa_registered? ? "Yes" : "No"  %></td>
+        </tr>
+        <tr>
+          <th align="left">CPD</th>
+          <td align="left"><%= practitioner.cpd? ? "Yes" : "No"  %></td>
+        </tr>
+      </table>
+    </div>
+  <% end %>
+<% end %>
+
+
+<h2>Optional Pictures</h2>
+<% unless @practice_application.image_1.blank? %>
+  <%= image_tag "#{@request}#{@practice_application.image_1}" %>
+<% end %>
+
+<% unless @practice_application.image_2.blank? %>
+  <%= image_tag "#{@request}#{@practice_application.image_2}" %>
+<% end %>
+
+<% unless @practice_application.image_3.blank? %>
+  <%= image_tag "#{@request}#{@practice_application.image_3}" %>
+<% end %>

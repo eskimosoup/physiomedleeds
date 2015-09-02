@@ -1,0 +1,10 @@
+<% title TeamMember.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ TeamMember.model_name.human }", new_admin_team_member_path %>
+</div>
+
+<%= informant_table @team_members, {
+      :headings => [ 'Position', 'Name', 'Qualification', 'Role', 'Image', 'Display', '', '' ], 
+      :body => [ it_sort, :name, :qualification, :role, it_edit_images(:image), it_ajax_toggle(:display), it_edit, it_destroy ]
+    } %>

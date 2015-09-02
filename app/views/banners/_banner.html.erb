@@ -1,0 +1,28 @@
+<div class="slide slide-<%= banner_counter %> <%= 'hidden' unless banner_counter.zero? %>">
+  <div class="left">
+    <h1><%= banner.title %></h1>
+
+    <% unless banner.content.blank? %>
+      <p class="italic">
+        <%= banner.content %>
+      </p>
+    <% end %>
+
+    <hr />
+
+
+    <div class="details">
+      <% unless banner.snippet.blank? %>
+        <strong><%= banner.snippet %></strong><br />
+      <% end %>
+
+      <% unless banner.link.blank? %>
+        <%= link_to (banner.link_text.blank? ? 'Find out more' : banner.link_text), banner.link, :class =>"green-button" %></div>
+      <% end %>
+
+  </div>
+
+  <div class="right">
+    <%= image_tag banner.image.show unless banner.image.blank? %>
+  </div>
+</div>

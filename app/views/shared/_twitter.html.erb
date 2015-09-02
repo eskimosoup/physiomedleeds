@@ -1,0 +1,36 @@
+<div class="twitter mobile-hidden">
+  <% begin %>
+    <% cache "twitter_side", :expires_in => 600  do %>
+      <h5>
+        Latest Tweets
+      </h5>
+      <% Twitter.user_timeline("Physio_Med", :count => 2).each do |tweet| %>
+
+        <% unless tweet.retweeted_status.blank? %>
+          <%= image_tag tweet.retweeted_status.profile_image_url %>
+
+          <p>
+            <%= raw scan_for_links(tweet.retweeted_status.text) %>
+            <%= link_to "#{ tweet.created_at.strftime('%H:%M - %d/%m/%Y') }", "https://www.twitter.com/#{ tweet.user.screen_name }/statuses/#{ tweet.id }", :target => "_blank", :class => "time" %>
+          </p>
+        <% else %>
+          <%= image_tag tweet.profile_image_url %>
+
+          <p>
+            <%= raw scan_for_links(tweet.text) %>
+            <%= link_to "#{ tweet.created_at.strftime('%H:%M - %d/%m/%Y') }", "https://www.twitter.com/#{ tweet.user.screen_name }/statuses/#{ tweet.id }", :target => "_blank", :class => "time" %>
+          </p>
+        <% end %>
+
+      <% end %>
+    <% end %>
+  <% rescue Twitter::Error => e %>
+    <% logger.error "Twitter broke due to: #{e}" %>
+    <%= "Twitter broke due to: #{e}" %>
+    <%= link_to image_tag("footer/twitter.png", :alt => "Follow us on Twitter"), "https://twitter.com/Physio_Med", {:target => "_blank"} %>
+    <h5>
+      Latest Tweets
+    </h5>
+    <p>Twitter is not responding</p>
+  <% end %>
+</div>

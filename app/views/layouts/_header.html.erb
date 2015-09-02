@@ -1,0 +1,68 @@
+<header id="header">
+  <div class="main_container">
+    <a href="#nav" class="green-button mobile-toggle mobile-only mobile-menu right">Menu</a>
+    <%= link_to image_tag('logo.jpg'), root_path %>
+
+    <%= image_tag 'tagline.jpg' %>
+    
+    <div class="clinic-name">Leeds and Guiseley Physiotherapy Clinics</div>
+    
+    <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
+      <div class="header-telephone">
+        <%= image_tag "phone.png", alt: "Phone" %> <strong><span class="calltracks_physiotherapyinleedscouk-main"><%= SITE_SETTINGS["Leeds Phone"] %></span></strong>
+      </div>
+    <% end %>
+  </div>
+</header>
+
+<div class="main_container">
+  <nav id="nav" class="mobile-hidden">
+    <% unless @navigation.blank? %>
+    <ul>
+      <% @navigation.each_with_index do |branch, i| %>
+        
+        
+        <% if @navigation.count == (i+3) %>
+          <li class="right contact-right">
+
+          <div id="contact-drop" class="hidden">
+            <hr>
+
+            <% unless SITE_SETTINGS["Leeds Address"].blank? %>
+              <p>
+                <strong><%= SITE_SETTINGS["Leeds Address"] %></strong>              
+              </p>
+            <% end %>
+
+            <p>
+              <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
+                T: <strong><span class="calltracks_physiotherapyinleedscouk-main"><%= SITE_SETTINGS["Leeds Phone"] %></span></strong><br />
+              <% end %>
+
+              <% unless SITE_SETTINGS["Leeds Fax"].blank? %>
+                F: <strong><%= SITE_SETTINGS["Leeds Fax"] %></strong><br />
+              <% end %>
+
+              <% unless SITE_SETTINGS["Email"].blank? %>
+                E: <strong><%= SITE_SETTINGS["Email"] %></strong><br />
+              <% end %>
+            </p>
+            <a class="green-button" href="/pages/find-us">Find Us</a><a class="green-button" href="/contacts/new#contact-form">Send a Message</a>
+          </div>
+        <% elsif @navigation.count == (i+2) or @navigation.count == (i+1) %>
+          <li class="right">
+        <% else %>
+          <li>
+        <% end %>
+          <% if @current_branch and @current_branch.name == branch.name %>
+            <%= link_to branch.name, branch.destination, :class => "active" %>
+          <% else %>
+            <%= link_to branch.name, branch.destination %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+
+    <div class="clear"></div>
+  <% end %>
+  </nav>

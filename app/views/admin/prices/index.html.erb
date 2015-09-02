@@ -1,0 +1,10 @@
+<% title Price.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ Price.model_name.human }", new_admin_price_path %>
+</div>
+
+<%= informant_table @prices, {
+      :headings => [ 'Position', 'Title', 'Price', 'Image', 'Display', 'Show read more', '', '' ], 
+      :body => [ it_sort, :title, :price, it_edit_images(:image), it_ajax_toggle(:display), it_ajax_toggle(:show_read_more), it_edit, it_destroy ]
+    } %>

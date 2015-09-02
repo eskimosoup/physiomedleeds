@@ -1,0 +1,51 @@
+<div id="intro-area">
+  <div class="full">
+		<% unless @page.blank? %>
+		  <h1><%= @page.title %></h1>
+    
+		  <%= raw @page.content %>
+			
+			<hr />
+			
+		<% end %>
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="page background no-top-padding">
+  <ul class="services">
+		<% @treatments.each do |treatment| %>
+			<li>
+				<div class="service">
+					<div class="textbox">
+						<h1><%= treatment.name %></h1>
+						
+						<p><%= treatment.summary %></p>
+						
+						<hr />
+						
+						<%= link_to 'Read More', treatment, title: "View #{ treatment.name }", class: 'green-button' %>
+					</div>
+					
+					<% unless treatment.image.blank? %>
+						<%= image_tag treatment.image.show %>
+					<% end %>
+				</div>
+				
+			</li>
+	<% end %>
+  
+  <div class="middle-inner">
+    <p class="left">
+      <strong>Want to see how we can help you?</strong> <%= link_to "Get in Touch", new_contact_path, :class =>"green-button" %>
+    </p>      
+    
+    <div class="right">
+      <%= render "shared/social_links" %>
+    </div>
+    
+    <div class="clear"></div>
+  </div>
+</div>
+

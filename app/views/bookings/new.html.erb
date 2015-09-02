@@ -1,0 +1,50 @@
+<div class="page">
+  <div class="page-left">   
+
+    <% unless @testimonials.blank? %>
+      <div class="quote">
+        <% @testimonials.each do |testimonial| %>
+        <span class="open"></span>
+
+          <p><%= testimonial.content %></p>
+
+        <span class="close"></span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  
+  <div class="page-middle">
+    <div class="middle-inner">
+    
+    <% unless @page.blank? %>
+      <h1><%= @page.title %></h1>
+      
+      <%= image_tag(@page.image.show, :title => @page.name, :alt => @page.name) unless @page.image.show.blank? %>
+      
+      <%= raw @page.content %>
+      
+    <% else %>
+      <h1>Book Now</h1>
+  
+      <p>Please fill in the form below to make a booking.</p>
+    <% end %>
+    
+    <%= render "form" %>
+    </div>
+  </div>
+
+  <div class="page-right">
+    <%= render "shared/no_quote_right_side_contact" %>
+
+
+    <div class="page-news-article mobile-hidden">
+      <h5>Latest News</h5>
+      <% @side_articles.each do |article| %>
+        <span><%= l article.date %></span><br/>
+        <h6><%= link_to article.title, article %></h6>
+      <% end %>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

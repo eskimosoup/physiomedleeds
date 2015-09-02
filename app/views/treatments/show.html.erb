@@ -1,0 +1,42 @@
+<div class="page">
+    <div class="page-left">
+    <a href="#explore-area" class="green-button mobile-area-toggle mobile-only">Explore</a>
+
+    <div id="explore-area" class="mobile-hidden">
+      <div class="green-header">
+        <h2>Explore</h2>
+        <span class="arrow"> </span>
+      </div>
+
+      <ul class="side-nav">
+        <% @treatments.each do |treatment| %>
+            <li><%= link_to treatment.name, treatment %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+    
+  <div class="page-middle">
+    <div class="middle-inner">
+      <p id="notice"><%= notice %></p>
+
+      <h1><%= @treatment.name %></h1>
+      
+      <p><%= @treatment.summary %></p>
+      
+      <%= raw @treatment.content %>
+      <hr />
+      
+      <%= render "shared/social_links" %>
+  </div>
+  </div>
+
+  <div class="page-right">
+    <%= image_tag 'page-side-wrist.jpg' %>
+
+    <%= render "shared/no_visual_right_side_contact" %>
+  </div>
+
+  <div class="clear"></div>
+</div>
+

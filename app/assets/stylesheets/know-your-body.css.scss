@@ -1,0 +1,412 @@
+@import "variables";
+
+#know-your-body {
+  h2 {
+    padding-top: 6px;
+  }
+  
+  p {
+    font-size: .7em;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  
+  .arrow {
+    top: -85px;
+  }
+}
+
+
+.know-your-body-teaser {
+  color: #fff;
+  font-weight: normal;
+  background-color: #77b332;
+  padding: 25px 25px 25px 20px;
+  margin: 0 0 1px 0;    
+}
+
+.know-your-body-instructions {
+  width: 94%;
+  margin: 10px 0;
+  padding: 25px 15px 10px 15px;
+  line-height: 1.2;
+}
+  
+.know-your-body-tooltip {
+  padding: 5px;
+  border: 1px solid #fff;
+  background-color: #77b332;
+  position: absolute;
+  z-index: 2;
+  
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.middle-inner .know-your-body-teaser h3 {
+  font-size: 1.5em;
+}
+  
+#front-body {
+  width: 256px;
+  height: 596px;
+	position: relative;
+  margin-top: 20px;
+  
+  div {
+    display: inline;
+  }
+  
+  .head {
+    position: absolute;
+    top: 0;
+  }
+  
+  .shoulder {
+    position: absolute;
+    top: 66px;
+    left: 0;
+  }
+  
+  .right-shoulder {
+    position: absolute;
+    top: 66px;
+    left: 110px;
+  }
+  
+  .shoulders {
+    position: absolute;
+    top: 140px;
+  }
+  
+  .wrist {
+    position: absolute;
+    top: 198px;
+    left: 0;
+  }
+  
+  .hip {
+    left: 39px;
+    position: absolute;
+    top: 198px;
+  }
+  
+  .right-arm {
+    position: relative;
+    top: 198px;
+    left: 110px;
+  }
+  
+  .legs {
+    left: 0;
+    position: absolute;
+    top: 332px;
+  }
+  
+  .left-knee {
+    position: absolute;
+    top: 375px;
+		left: 0;
+  }
+  
+  .right-knee {
+    left: 126px;
+    position: absolute;
+    top: 375px;
+  }
+  
+  .lower-leg {
+    position: absolute;
+    top: 454px;
+    left: 0;
+  }
+  
+  .foot {
+    position: absolute;
+    top: 532px;
+    right: 130px;
+  }
+  
+  .above-ankle {
+    position: absolute;
+    top: 454px;
+    left: 126px;
+  }
+  
+  .ankle {
+    position: absolute;
+    top: 508px;
+    left: 126px;
+  }
+}
+
+#back-body {
+  width: 256px;
+  height: 596px;
+	position: relative;
+  margin-top: 19px;
+  
+  div {
+    display: inline;
+  }
+  
+  .neck {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .shoulders {
+    position: absolute;
+    top: 104px;
+  }
+  
+  .elbow {
+    position: absolute;
+    top: 160px;
+    left: 0;
+  }
+  
+  .middle-back {
+    position: absolute;
+    top: 160px;
+    left: 89px;
+  }
+  
+  .wrist {
+    position: absolute;
+    left: 0;
+    top: 236px;
+  }
+  
+  .lower-back {
+    position: absolute;
+    left: 88px;
+    top: 214px; 
+  }
+  
+  .top-legs {
+    position: absolute;
+    top: 294px;
+    left: 88px;
+  }
+  
+  .right-wrist {
+    position: absolute;
+    top: 236px;
+    left: 161px;
+  }
+  
+  .lower-legs {
+    position: absolute;
+    top: 308px;
+    left: -1px;
+  }
+  
+  .lower-left-leg {
+    position: absolute;
+    top: 476px;
+    left: 62px;
+  }
+  
+  .lower-right-leg {
+    position: absolute;
+    top: 476px;
+    left: 129px;
+  }
+  
+  .left-foot {
+    position: absolute;
+    top: 531px;
+    left: -1px;
+  }
+  
+  .right-foot {
+    position: absolute;
+    top: 531px;
+    left: 110px;
+  }
+}
+
+
+// IE 9 and 10: http://stackoverflow.com/a/14916454
+@media screen and (min-width:0\0) {
+  #front-body {
+    width: 256px;
+    height: 578px;
+    overflow: hidden;
+    margin-top: 20px;
+    
+    div {
+      display: inline;
+    }
+    
+    .head {
+      position: relative;
+      top: 0;
+    }
+    
+    .shoulder {
+      position: relative;
+      top: -6px;
+      left: 0;
+    }
+    
+    .right-shoulder {
+      position: relative;
+      top: -87px;
+      left: 110px;
+    }
+    
+    .shoulders {
+      position: relative;
+      top: -94px;
+    }
+    
+    .wrist {
+      position: relative;
+      top: -100px;
+      left: 1px;
+    }
+    
+    .hip {
+      position: relative;
+      top: -100px;
+      left: -4px;
+    }
+    
+    .right-arm {
+      position: relative;
+      top: -241px;
+      left: 110px;
+    }
+    
+    .legs {
+      position: relative;
+      top: -248px;
+    }
+    
+    .left-knee {
+      position: relative;
+      top: -255px;
+    }
+    
+    .right-knee {
+      position: relative;
+      top: -342px;
+      left: 126px;
+    }
+    
+    .lower-leg {
+      position: relative;
+      top: -347px;
+      left: 0;
+    }
+    
+    .foot {
+      position: relative;
+      top: -356px;
+      left: 1px;
+    }
+    
+    .above-ankle {
+      position: relative;
+      top: -502px;
+      left: 126px;
+    }
+    
+    .ankle {
+      position: relative;
+      top: -509px;
+      left: 125px;
+    }
+  }
+  
+  #back-body {
+    width: 256px;
+    height: 620px;
+    overflow: hidden;
+    
+    div {
+      display: inline;
+    }
+    
+    .neck {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    
+    .shoulders {
+      position: relative;
+      top: -6px;
+    }
+    
+    .elbow {
+      position: relative;
+      top: -15px;
+      left: 0;
+    }
+    
+    .middle-back {
+      position: relative;
+      top: -98px;
+      left: 89px;
+    }
+    
+    .wrist {
+      position: relative;
+      left: 0;
+      top: -126px;
+    }
+    
+    .lower-back {
+      position: relative;
+      left: -5px;
+      top: -126px;
+    }
+    
+    .top-legs {
+      position: relative;
+      left: -83px;
+      top: -102px;
+    }
+    
+    .right-wrist {
+      position: relative;
+      top: -205px;
+      left: 162px;
+    }
+  
+    .lower-legs {
+      position: relative;
+      top: -213px;
+      left: 0;
+    }
+    
+    .lower-left-leg {
+      position: relative;
+      top: -220px;
+      left: 63px;
+    }
+    
+    .lower-right-leg {
+      position: relative;
+      top: -220px;
+      left: 58px;
+    }
+    
+    .left-foot {
+      position: relative;
+      top: -226px;
+      left: 0;
+    }
+    
+    .right-foot {
+      position: relative;
+      top: -282px;
+      left: 111px;
+    }
+  }
+}

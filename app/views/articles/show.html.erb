@@ -1,0 +1,61 @@
+<div class="page">
+  <div class="page-wide no-top-margin">
+    <div class="middle-inner">
+      <p id="notice"><%= notice %></p>
+
+      <% unless @article.image.blank? %>
+        <% #if @article.infographic_image?
+        %>
+          <%= #link_to image_tag(@article.image), @article.infographic_image.url, :alt => @article.image_alt, :class => "colorbox"
+          %>
+        <% #else
+        %>
+          <%= image_tag @article.image.show, :alt => @article.image_alt %>
+        <% #end
+        %>
+      <% end %>
+
+      <h1><%= @article.title %></h1>
+      
+      <%= raw @article.content %>
+
+      <hr />
+
+      <%= render "shared/social_links" %>
+
+      <div id="explore">
+        Explore
+        <ul>
+        <% @recent_articles.each do |article| %>
+          <% if article.title == @article.title %>
+            <li><%= link_to article.title, article, :class => "current" %></li>
+          <% else %>
+            <li><%= link_to article.title, article %></li>
+          <% end %>
+        <% end %>
+        </ul>
+      </div>
+  </div>
+  </div>
+
+  <div class="page-right">
+    <%= image_tag 'page-side-wrist.jpg' %>
+
+    <%= render "shared/no_visual_right_side_contact" %>
+
+    <% unless @testimonials.blank? %>
+      <div class="quote">
+        <% @testimonials.each do |testimonial| %>
+        <span class="open"></span>
+
+          <p><%= testimonial.content %></p>
+
+        <span class="close"></span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="clear"></div>
+</div>
+

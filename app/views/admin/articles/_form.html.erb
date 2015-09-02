@@ -1,0 +1,47 @@
+<%= form_for([:admin, @article]) do |f| %>
+
+  <%= f.error_messages %>
+
+  <%= field_set_tag 'Basic' do -%>
+
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= f.label :summary %><br />
+      <%= f.text_field :summary %>
+    </div>
+
+    <div class="field">
+      <%= f.label :content %><br />
+      <%= f.text_area :content, :class => "tinymce" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :image %><br />
+      <%= f.image_field :image, :alt => true %>
+    </div>
+
+  <% end -%>  
+
+  <%= field_set_tag 'Settings' do -%>
+
+    <div class="field">
+      <%= f.label :date %><br />
+      <%= f.text_field :date, :class => "datepicker" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :display %><br />
+      <%= f.check_box :display %>
+    </div>
+
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

@@ -1,0 +1,72 @@
+<% unless @banners.blank? %>
+  <div id="slider">
+    <%= render @banners %>
+
+    <div class="clear"></div>
+
+    <div class="slider-controls">
+      <% @banners.each_with_index do |banner, i| %>
+        <% if i.zero? %>
+          <%= link_to i, '#', :class => "toggle-slide toggle-#{i} current-slide", 'data-slide-id' => i %>
+        <% else %>
+          <%= link_to i, '#', :class => "toggle-slide toggle-#{i}", 'data-slide-id' => i %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<div class="home-page">
+  <div class="page float-left">
+    <div class="green-header">
+      <h2>Welcome to Physio Med</h2>
+      <span class="arrow"> </span>
+    </div>
+
+    <h1>Welcome to Physio Med</h1>
+
+    <p class="introduction">Physio Med is one of the most established clinics in Leeds and Guiseley.</p>
+
+    <p>We have been providing physiotherapy in Leeds and the surrounding area since the original Guiseley clinic was opened in 1990.</p>
+
+    <p>Since that time we have developed strong links with consultants, GPs, sports clubs, companies and the local population.</p>
+
+    <p>We have treated literally 1000s of patients over the last 20+ years.</p>
+
+    <p>Our team of fully accredited and qualified Senior Physiotherapists are here to give you the best advice and treatment to manage and improve your injury.</p>
+
+    <p>Our treatments include sports physiotherapy and massage, podiatry, back care classes and more.</p>
+
+    <p>We have both early and late appointments to make booking as convenient as possible for you.</p>
+
+    <p><%= link_to "Contact us", new_contact_path %> now or <%= link_to "request a booking", new_booking_path %> so we can assess your injury, give you the best treatment plan and get you on the road to fast recovery.</p>
+  </div>
+
+  <div class="page float-right">
+    <div class="home-feature article">
+      <% unless @articles.blank? %>
+        <h1>Latest News</h1>
+        <% @articles.each do |article| %>
+          <div class="list-item">
+            <% unless article.image.blank? %>
+              <%= link_to (image_tag article.image.index, {:alt => article.image_alt}), article %>
+            <% end %>
+
+            <h2><%= link_to article.title, article %></h2>
+
+            <p><%= truncate article.summary, :length => 200 %> <%= link_to "Read More", article, :class => 'read-more' %></p>
+
+            <div class="release italic">News release: <%= l article.date, :format => :news %></div>
+
+            <hr />
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <%= link_to 'Buy Physiotherapy Products Online', 'http://www.phoenix-healthcare.co.uk/', :target => 'blank', :class => 'buy-products-online' %>
+  </div>
+
+  <div class="clear"></div>
+
+</div>

@@ -1,0 +1,59 @@
+<div class="page">
+  <div class="page-left">
+    <a href="#explore-area" class="green-button mobile-area-toggle mobile-only">Explore</a>
+    
+    <div id="explore-area" class="mobile-hidden">
+      <div class="green-header">
+        <h2>Explore</h2>
+        <span class="arrow"> </span>
+      </div>
+  
+      <ul class="side-nav">
+        <% @body_parts.each do |body_part| %>
+            <li><%= link_to body_part.name, body_part %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+    <div class="page-middle">
+      <div class="middle-inner">
+        <!-- <h1><%#= title @current_branch.name %></h1> -->
+        
+        <div class="know-your-body-teaser green-header">
+          <h3>This is only a small taste of what we offer...</h3>
+          <span class="arrow"></span>
+          <p>If you are a customer of Physio Med you will automatically have access to our full 
+          <strong>Know Your Body</strong> section where you will find a vast resource on the types of back injuries 
+          that you could suffer from as well as information about the steps that should be taken 
+          for fixing this problem.</p>
+        </div>
+        
+        <%= image_tag "know-your-body/front.png", :class => 'left' %>
+        <%= image_tag "know-your-body/back.png", :class => 'left' %>
+        
+        <hr />
+        
+        <%= render "shared/social_links" %>
+      </div>
+     </div>
+
+  <div class="page-right no-visual">
+    <%= render "shared/no_visual_right_side_contact" %>
+    
+    <div class="crosslink mobile-hidden blue-box" id="case-studies">
+      <a href="/case-studies" title="Case Studies">
+      
+      <div>
+        <h2>Case Studies</h2>
+        <hr />
+        <p>Read <strong>success stories</strong> from existing Physiomed clients.</p>
+      </div>
+      
+      <span class="arrow"></span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="clear"></div>
+</div>
+

@@ -1,0 +1,8 @@
+<h1>Testimonials</h1>
+
+<% @testimonials.each do |testimonial| %>
+  <div class="testimonial">
+    <%= testimonial.content %>
+    <%= testimonial.author %>
+  </div>
+<% end %>

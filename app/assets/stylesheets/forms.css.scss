@@ -1,0 +1,171 @@
+@import "variables";
+
+.new_contact, .new_booking {
+   margin: 50px 0 0 40px;
+   
+  label {
+    padding: 0;
+    color: #999999;
+    font-weight: bold;
+    width: 25%;
+    display: inline-block;
+  }
+
+  input[type='text'], textarea, select, input[type='file'] {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #e1dcd2;
+    background: image-url('/assets/form_bg.gif') 0 1px repeat-x #fff;
+    resize: none;
+    padding: 7px 3px;
+  }
+  
+  textarea {
+    height: 80px;    
+  }
+
+  .textarea {
+    margin-top: 3px;
+  }
+  
+  .textarea label {
+    vertical-align: top;
+  }
+
+  fieldset {
+    padding: 20px;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+    
+  fieldset legend {
+    padding: 0 10px;
+  }
+
+
+  .field_with_errors {
+    min-width: 25%;
+  }
+
+  .field {
+    margin: 2px 0;
+  }
+
+  .actions {
+    margin: 11px 0 0 139px
+  }
+
+  .green-button {
+    color: #fff;
+    padding: 4px;
+  }
+}
+
+#contact-form {
+  font-family: proxima-nova, Arial, Helvetica, sans-serif;
+  height: 404px;
+
+  .details .green-button {
+    float: right;
+    *float: none;
+  }
+  
+  .left {
+    margin-top: 20px;
+    line-height: 1;
+  }
+  
+  .left hr {
+    margin: 0;
+    width: 50%;
+    font-size: 1.813em;
+    margin-bottom: 15px;
+    color: #575757;
+    font-weight: bold;
+  }
+
+  .right {
+    height: auto;
+    position: relative;
+    z-index: 1;
+    top: -27px;
+  }
+  
+  .contact-right {
+    *height: 50px;
+    *top: -38px;
+    float: right;
+    width: 75%;
+  }
+  
+   .left {
+    width: 38%;
+  }
+  
+  h1 {
+    font-size: 1.813em;
+    margin-bottom: 15px;
+    color: #575757;
+    font-weight: bold;
+  }
+  
+  .form-right {
+    width: 60%;
+    border-left: 1px dotted #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 70px;
+    float: right;
+  }
+  
+  .form-right input, .form-right textarea {
+     width: 72%;
+  }
+  
+  .form-right input.green-button {
+    width: auto;
+  }
+  
+  .error-messages {
+    margin-top: -100px;
+  }
+  
+  .form-right #flash_notice {
+    margin: -10px 0px 0 36px;
+  }
+  
+  p {
+    font-size: 0.875em;
+    line-height: 1.65;
+    margin-bottom: 10px;
+  }
+
+  .address {
+    margin: 20px 0 0 0;
+    font-size: .95em;
+  }
+}
+
+.contact {
+  margin: 10px 30px 10px 0;
+  font-size: .95em;
+
+  span {
+    float: right;
+    width: 73%;
+    font-weight: bold;
+  }
+}
+
+.new_booking .actions {
+   margin-left: 0;
+   
+   input {
+      padding: 10px;
+   }
+}
+
+#warning-output {
+  line-height: 1;
+  font-size: 14px;
+}

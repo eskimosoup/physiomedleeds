@@ -1,0 +1,99 @@
+@import "variables";
+
+#slider {
+  height: 403px;
+}
+
+#slider, #intro-area {
+  font-family: proxima-nova, Arial, Helvetica, sans-serif;
+
+  .left {
+    width: 43%;
+    margin-top: 45px;
+    line-height: 1;
+  }
+  
+  .left h1 {
+    font-size: 1.813em;
+    margin-bottom: 15px;
+    color: #575757;
+    font-weight: bold;
+  }
+
+  .left hr {
+    margin: 20px 0;
+  }
+  
+  .right {
+    width: 57%;
+    position: relative;
+    z-index: 1;
+    top: -27px;
+    *top: -30px;
+    *height: 404px;
+    *overflow: hidden;
+    height: 403px;
+  }  
+  
+  .full {
+    width: 100%;
+    margin-top: 45px;
+    line-height: 1;
+    float: left;
+  }
+    
+  .full h1 {
+    font-size: 2.307em;
+    margin-bottom: 15px;
+    color: #575757;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  .full hr {
+    margin: 40px 0;
+  }
+
+  p {
+    font-size: 0.875em;
+    line-height: 1.65;
+    margin-bottom: 10px;
+  }
+
+  .details .green-button {
+    float: none;
+    margin: 10px 0;
+  }
+  
+  .slider-controls {
+    position: relative;
+    right: 40px;
+    bottom: 28px;
+    *bottom: 70px;
+    z-index: 200;
+    text-align: right;
+  }
+  
+  .slider-controls .toggle-slide {
+    width: 20px;
+    height: 20px;
+    text-indent: 999px;      
+    display: inline-block;
+    *float: right;
+    *display: inline;
+    *zoom: 1;
+    background: image-url('/assets/slider/toggle-normal.png') no-repeat;
+    
+    &:hover {
+      background-image: image-url('/assets/slider/toggle-hover.png');
+    }
+  }
+    
+  .slider-controls .current-slide {      
+    background-image: image-url('/assets/slider/toggle-active.png');
+  }
+  
+  .tablet-hidden {
+    display: block !important;
+  }
+}

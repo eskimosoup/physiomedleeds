@@ -1,0 +1,23 @@
+<%= form_for([:admin, @action_quote]) do |f| %>
+
+  <%= f.error_messages %>
+
+  <%= field_set_tag 'Basic' do -%>
+    
+    <div class="field">
+      <%= f.label :content %><br />
+      <%= f.text_area :content %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :display %><br />
+      <%= f.check_box :display, checked: true %>
+    </div>
+    
+  <% end -%>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>					

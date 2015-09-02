@@ -1,0 +1,11 @@
+<% title BodyPartSection.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "Back to Body Parts", admin_body_parts_path %>
+  <%= link_to "New #{ BodyPartSection.model_name.human }", new_admin_body_part_body_part_section_path(@body_part) %>
+</div>
+
+<%= informant_table @body_part_sections, {
+      :headings => [ 'Name', 'Display', '', '' ],
+      :body => [ :name, it_ajax_toggle(:display), it_edit, it_destroy ]
+    } %>
