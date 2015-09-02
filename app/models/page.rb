@@ -3,7 +3,7 @@ class Page < ActiveRecord::Base
   validates :title, :presence => true
 
   extend FriendlyId
-  friendly_id :name, :use => :slugged
+  friendly_id :name, :use => [:slugged, :history]
 
   is_a_leaf
 
