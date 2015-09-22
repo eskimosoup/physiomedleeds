@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
       @current_branch = static_page.branch
     end
     @contact = Contact.new
-    
+
     render :layout => "contacts"
   end
 
@@ -15,13 +15,13 @@ class ContactsController < ApplicationController
     if @contact.valid?
       ContactMailer.new(@contact).deliver
       redirect_to thank_you_contacts_path
-		else
+    else
       render :action => "new", :alert => "Please ensure all mandatory fields (marked with an asterisk) are completed"
     end
   end
 
   def thank_you
-		render :layout => "application"
+    render :layout => "application"
   end
 
 end

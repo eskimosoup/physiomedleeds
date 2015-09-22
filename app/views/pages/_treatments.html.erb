@@ -1,32 +1,32 @@
 <% content_for :head do %>
-	<script>
-		$(document).ready(function() {
-			
-			if ( window.location.hash ) {
-				$(window.location.hash + ' .info').removeClass('hidden', function() {
-					window.location.hash = window.location.hash
-					$(window.location.hash + ' .green-button').text('Read Less');
-				});
-			}
-		});
-		
-		$(document).on("click", ".services h1 a", function() {
-			var href = $(this).attr("href");
-			var hash = href.substr(href.indexOf("#"));
-		
-			$(hash + ' .info').removeClass('hidden');
-			$(hash + ' .green-button').text('Read Less');
-		});
-	</script>
+  <script>
+    $(document).ready(function() {
+
+      if ( window.location.hash ) {
+        $(window.location.hash + ' .info').removeClass('hidden', function() {
+          window.location.hash = window.location.hash
+          $(window.location.hash + ' .green-button').text('Read Less');
+        });
+      }
+    });
+
+    $(document).on("click", ".services h1 a", function() {
+      var href = $(this).attr("href");
+      var hash = href.substr(href.indexOf("#"));
+
+      $(hash + ' .info').removeClass('hidden');
+      $(hash + ' .green-button').text('Read Less');
+    });
+  </script>
 <% end %>
 
 <div id="intro-area">
   <div class="full">
-		<h1><%= @page.title %></h1>
-    
-		<%= raw @page.content %>
-			
-		<hr />
+    <h1><%= @page.title %></h1>
+
+    <%= raw @page.content %>
+
+    <hr />
   </div>
 </div>
 
@@ -34,42 +34,42 @@
 
 <div class="page background no-top-padding">
   <ul class="services">
-		<% @treatments.each_with_index do |treatment, index| %>
-			<li id="<%= treatment.name.downcase.tr(' ', '_') %>">
-				<div class="service">
-					<div class="textbox">
-						<h1><%= link_to treatment.name, "##{treatment.name.downcase.tr(' ', '_')}" %></h1>
-						
-						<p><%= treatment.summary %></p>
-						
-						<hr />
-						
-            <a class="green-button area-toggle" href="#treatment-<%= index %>">Read More</a>            
-					</div>
-					
-					<% unless treatment.image.blank? %>
-						<%= image_tag treatment.image.show %>
-					<% end %>
+    <% @treatments.each_with_index do |treatment, index| %>
+      <li id="<%= treatment.name.downcase.tr(' ', '_') %>">
+        <div class="service">
+          <div class="textbox">
+            <h1><%= link_to treatment.name, "##{treatment.name.downcase.tr(' ', '_')}" %></h1>
+
+            <p><%= treatment.summary %></p>
+
+            <hr />
+
+            <a class="green-button area-toggle" href="#treatment-<%= index %>">Read More</a>
+          </div>
+
+          <% unless treatment.image.blank? %>
+            <%= image_tag treatment.image.show %>
+          <% end %>
         </div>
-          
+
           <div class="info hidden" id="treatment-<%= index %>">
           <div class="hr"><hr></div>
           <%= raw treatment.content %>
-          
-				</div>
-				
-			</li>
-	<% end %>
-  
+
+        </div>
+
+      </li>
+  <% end %>
+
   <div class="middle-inner">
     <p class="left">
       <strong>Want to see how we can help you?</strong> <%= link_to "Get in Touch", new_contact_path, :class =>"green-button" %>
-    </p>      
-    
+    </p>
+
     <div class="right">
       <%= render "shared/social_links" %>
     </div>
-    
+
     <div class="clear"></div>
   </div>
 </div>

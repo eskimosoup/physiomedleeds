@@ -6,7 +6,7 @@ google.maps.visualRefresh = true;
 var map;
 function initialize() {
 
-  var lLatLng = new google.maps.LatLng(53.777003,-1.584418);  
+  var lLatLng = new google.maps.LatLng(53.777003,-1.584418);
   var gLatLng = new google.maps.LatLng(53.872723,-1.707391);
 
   var lmapOptions = {
@@ -14,27 +14,27 @@ function initialize() {
     center: lLatLng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  
-  
+
+
   var gmapOptions = {
     zoom: 15,
     center: gLatLng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  
+
   lmap = new google.maps.Map(document.getElementById('leeds-map-canvas'),
   lmapOptions);
-  
+
   gmap = new google.maps.Map(document.getElementById('guiseley-map-canvas'),
   gmapOptions);
-  
-  
+
+
   var gmarker = new google.maps.Marker({
     position: gLatLng,
     map: gmap,
     title:"PhysioMed"
   });
-  
+
   var lmarker = new google.maps.Marker({
     position: lLatLng,
     map: lmap,
@@ -48,11 +48,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 <div id="intro-area">
   <div class="full">
-		<h1><%= @page.title %></h1>
-    
-		<%= raw @page.content %>
-			
-		<hr />
+    <h1><%= @page.title %></h1>
+
+    <%= raw @page.content %>
+
+    <hr />
   </div>
 </div>
 
@@ -66,84 +66,84 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </div>
 
     <div id="map">
-      
+
       <p>You can find us via:</p>
-      
+
       <div id="leeds" class="location">
         <h2>Physio Med Leeds</h2>
-        
-        
+
+
         <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
           <div class="contact">Tel: <strong><span class="calltracks_physiotherapyinleedscouk-main"><%= SITE_SETTINGS["Leeds Phone"] %></span></strong></div>
         <% end %>
-        
+
         <div id="leeds-map-canvas" class="map-canvas"></div>
-        
+
         <% unless SITE_SETTINGS["Leeds Address"].blank? %>
-          <% address_lines = SITE_SETTINGS["Leeds Address"].split(",") %>          
+          <% address_lines = SITE_SETTINGS["Leeds Address"].split(",") %>
           <% address_lines.each do |address_line| %>
             <strong><%= address_line %></strong><br />
           <% end %>
         <% end %>
-        
+
         <br />
-        
+
         <form action="http://maps.google.com/maps" method="get" target="_blank">
           <label for="saddr">Enter your post code for directions</label>
           <input type="text" name="saddr" />
           <input type="hidden" name="daddr" value="<%= SITE_SETTINGS["Leeds Address"] %>" />
           <input type="submit" value="Get directions" />
        </form>
-        
+
         <hr />
-        
+
         <%= link_to ( image_tag "clinics/leeds/1.jpg", :alt => "PhysioMed Leeds" ), "/assets/clinics/leeds/1-large.jpg", :class => "colorbox" %>
         <%= link_to ( image_tag "clinics/leeds/2.jpg", :alt => "PhysioMed Leeds" ), "/assets/clinics/leeds/2-large.jpg", :class => "colorbox" %>
         <%= link_to ( image_tag "clinics/leeds/3.jpg", :alt => "PhysioMed Leeds" ), "/assets/clinics/leeds/3-large.jpg", :class => "colorbox" %>
         <%= link_to ( image_tag "clinics/leeds/4.jpg", :alt => "PhysioMed Leeds" ), "/assets/clinics/leeds/4-large.jpg", :class => "colorbox" %>
         <%= link_to ( image_tag "clinics/leeds/5.jpg", :alt => "PhysioMed Leeds" ), "/assets/clinics/leeds/5-large.jpg", :class => "colorbox" %>
       </div>
-      
+
       <div id="guiseley" class="location">
         <h2>Physio Med Guiseley</h2>
-        
+
         <% unless SITE_SETTINGS["Guiseley Phone"].blank? %>
           <div class="contact">Tel: <strong><%= SITE_SETTINGS["Guiseley Phone"] %></strong></div>
         <% end %>
-        
+
         <div id="guiseley-map-canvas" class="map-canvas"></div>
-        
+
         <% unless SITE_SETTINGS["Guiseley Address"].blank? %>
-          <% address_lines = SITE_SETTINGS["Guiseley Address"].split(",") %>          
+          <% address_lines = SITE_SETTINGS["Guiseley Address"].split(",") %>
           <% address_lines.each do |address_line| %>
             <strong><%= address_line %></strong><br />
           <% end %>
         <% end %>
-        
+
         <form action="http://maps.google.com/maps" method="get" target="_blank">
           <label for="saddr">Enter your post code for directions</label>
           <input type="text" name="saddr" />
           <input type="hidden" name="daddr" value="<%= SITE_SETTINGS["Guiseley Address"] %>" />
           <input type="submit" value="Get directions" />
         </form>
-        
+
         <hr />
-        
+
         <% link_to ( image_tag "clinics/guiseley/1.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/1-large.jpg", :class => "colorbox" %>
         <% link_to ( image_tag "clinics/guiseley/2.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/2-large.jpg", :class => "colorbox" %>
         <%= link_to ( image_tag "clinics/guiseley/3.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/3-large.jpg", :class => "colorbox" %>
         <% link_to ( image_tag "clinics/guiseley/4.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/4-large.jpg", :class => "colorbox" %>
         <% link_to ( image_tag "clinics/guiseley/5.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/5-large.jpg", :class => "colorbox" %>
-        
+
         <%= link_to ( image_tag "clinics/guiseley/7.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/7-large.jpg", :class => "colorbox" %>
         <% link_to ( image_tag "clinics/guiseley/8.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/8-large.jpg", :class => "colorbox" %>
         <%= link_to ( image_tag "clinics/guiseley/9.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/9-large.jpg", :class => "colorbox" %>
         <% link_to ( image_tag "clinics/guiseley/10.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/10-large.jpg", :class => "colorbox" %>
-				<%= link_to ( image_tag "clinics/guiseley/6.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/6-large.jpg", :class => "colorbox" %>
+        <%= link_to ( image_tag "clinics/guiseley/6.jpg", :alt => "PhysioMed Guiseley" ), "/assets/clinics/guiseley/6-large.jpg", :class => "colorbox" %>
       </div>
-    
+
       <div class="clear"></div>
-      
+
     </div>
   </div>
 </div>

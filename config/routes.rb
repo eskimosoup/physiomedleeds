@@ -1,28 +1,5 @@
 PhysiomedLeeds::Application.routes.draw do
 
-  get "sitemap" => "application#sitemap"
-
-  namespace :admin do
-    manticore_resources :seo_entries do
-      get 'rebuild_seo', :on => :collection
-    end
-  end
-
-
-
-  #namespace :admin do manticore_resources :team_members end
-
-  resources :team_members, only: [:index]
-
-
-  #resources :prices
-
-
-  resources :bookings, :only => [:new, :create] do
-    get "thank_you", :path => "thank-you", :on => :collection
-  end
-
-
   namespace :admin do
     manticore_resources :testimonials
     chronicler_resources :articles
@@ -35,20 +12,24 @@ PhysiomedLeeds::Application.routes.draw do
     chronicler_resources :prices
     chronicler_resources :team_members
     manticore_resources :action_quotes
+    manticore_resources :seo_entries do
+      get 'rebuild_seo', :on => :collection
+    end
   end
 
+  get "sitemap" => "application#sitemap"
   resources :articles
   resources :body_parts, :path => "body-parts", :only => [:index, :show] do
     resources :body_part_sections, :path => "body-part-sections", :only => [:show]
   end
+  resources :bookings, :only => [:new, :create] do
+    get "thank_you", :path => "thank-you", :on => :collection
+  end
   resources :contacts, :only => [:new, :create] do
     get "thank_you", :path => "thank-you", :on => :collection
   end
-  
-  #get '/contacts/new#map', to: 'contacts#new', as: :contacts_map  
-  #get '/#about-us', to: 'application#index', as: :about_us
-  
   resources :pages
+  resources :team_members, only: [:index]
   resources :testimonials, only: [:index, :show]
   resources :treatments, only: [:index, :show]
 
