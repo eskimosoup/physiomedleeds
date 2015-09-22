@@ -3,22 +3,22 @@
   <%= f.error_messages %>
 
   <%= field_set_tag 'Basic' do -%>
-    
+
     <div class="field">
       <%= f.label :title %><br />
       <%= f.text_field :title %>
     </div>
-    
+
     <div class="field">
       <%= f.label :content %><br />
       <%= f.text_area :content %>
     </div>
-    
+
     <div class="field">
       <%= f.label :snippet %><br />
       <%= f.text_field :snippet %>
     </div>
-    
+
     <div class="field">
       <%= f.label :link %><br />
       <%= f.text_field :link %>
@@ -34,16 +34,16 @@
       <%= image_tag @banner.image.thumb unless @banner.image.blank? %><br />
       <%= f.file_field :image %>
     </div>
-    
+
     <div class="field">
       <%= f.label :display %><br />
       <%= f.check_box :display %>
     </div>
-    
+
   <% end -%>
-  
+
   <div class="actions">
     <%= f.submit %>
   </div>
-  
-<% end %>					
+
+<% end %>

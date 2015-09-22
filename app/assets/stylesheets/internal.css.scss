@@ -9,7 +9,7 @@
     float: left;
     margin-right: 0;
   }
-  
+
   .page-left .green-button {
     color: #fff;
     font-size: 0.9em;
@@ -21,83 +21,83 @@
     float: left;
     background-color: #fff;
   }
-  
+
   .page-middle .green-button, .page-middle .blue-button {
     color: #fff;
   }
-  
+
   .page-middle a {
     color: #78b432;
   }
-  
+
   .page-wide {
     width: 74%;
     margin: -10px 1% 0 1%;
     float: left;
     background-color: #fff;
   }
-  
+
   .no-top-margin {
     margin-top: -35px;
   }
-  
+
   .map {
     padding: 10px 0 10px 12px;
   }
-  
+
   .map .no-results {
     padding: 10px;
     color: #808080;
   }
-  
+
   .page-wide.map {
     margin-top: -75px;
     *margin-top: -100px;
   }
-  
+
   .find-a-physio {
     margin-top: 80px;
   }
-  
+
   .find-a-physio input {
     width: 45%;
     font-weight: bold;
   }
-  
+
   .find-a-physio .post-code {
     text-transform: uppercase;
     outline: 0;
   }
-  
+
   .find-a-physio .find-button {
     float: right;
     height: 28px;
   }
-  
+
   #closest-results {
     margin: 10px 24px 10px 10px;
   }
-  
+
   #closest-results .branch {
     border-bottom: 1px dotted #146982;
     padding: 10px 0;
   }
-  
+
   #closest-results .branch .blue-header {
     margin-right: 4px;
     padding: 1px 10px;
     font-weight: bold;
     font-size: 1em;
   }
-  
+
   #closest-results .branch .blue-header .arrow {
     left: 10px;
   }
-  
+
   .middle-inner {
     padding: 10px 28px;
   }
-  
+
   .middle-inner h1, .middle-inner h2, .middle-inner h3, .middle-inner  h4, .middle-inner  h5, .middle-inner  h6 {
     font-family: proxima-nova, Arial, Helvetica, sans-serif;
   }
@@ -119,11 +119,11 @@
   .middle-inner h2 {
     font-size: 1.2em;
     line-height: 1.1;
-		color: #826e3c;
+    color: #826e3c;
     margin-top: 12px;
     padding-top: 12px;
   }
-  
+
   .middle-inner  h3 {
     font-size: 2em;
     line-height: 1;
@@ -138,12 +138,12 @@
   .no-visual {
     margin-top: 236px;
   }
-  
+
   .page-right {
     width: 20%;
     float: left;
   }
-  
+
   .page-right img {
     position: relative;
     top: -94px;
@@ -155,7 +155,7 @@
   .page-right .body-part-image {
     right: 14px;
   }
-    
+
   .page-right .item {
     margin: -121px 0 0 25px;
     top: -6px;
@@ -165,14 +165,14 @@
     left: 0;
     width: auto;
   }
-  
+
   .page-right .item .item-inner {
     width: 194px;
     padding: 10px 8px;
     height: auto;
-		background: #fff;
+    background: #fff;
   }
-  
+
   .page-right .item:last-of-type {
     width: auto;
   }
@@ -225,7 +225,7 @@
   /*border-top: 1px solid #e1dcd2;*/
   border-bottom: 1px solid #e1dcd2;
   /*background: #f0ebe6;*/
-  
+
   .open {
     background: image-url('/assets/quote_open_dark.gif') no-repeat 0 0;
     width: 16px;
@@ -255,7 +255,7 @@
   margin: 140px 0 0 0;
   background: transparent;
   border-top: 0;
-  
+
   .close {
     right: -140px;
   }
@@ -317,26 +317,26 @@
   div {
     padding: 5px 10px;
   }
-  
+
   a {
     color: #fff;
     text-decoration: none;
     font-size: 1.1em;
   }
-  
+
   h2 {
     padding: 12px 10px 0 0;
     font-weight: normal;
     font-size: 1em;
     background: image-url('/assets/hq/crosslink_arrow.png') center right no-repeat;
   }
-  
+
   hr {
     width: 50%;
     border-color: #6ec8e1;
     border-top: 0;
   }
-  
+
   p {
     font-size: .8em;
     line-height: 1.2;
@@ -345,7 +345,7 @@
   strong {
     color: #8cdcfa;
   }
-  
+
   .arrow {
     position: relative;
     top: -90px;
@@ -372,23 +372,23 @@
   div {
     padding: 10px;
   }
-  
+
   h2 {
     padding: 12px 10px 0 0;
     font-weight: normal;
     font-size: 1em;
   }
-  
+
   hr {
     width: 50%;
     border-color: #6ec8e1;
     border-top: 0;
   }
-  
+
   strong {
     color: #8cdcfa;
   }
-  
+
   .arrow {
     position: relative;
     top: -70px;
@@ -417,7 +417,7 @@
     margin: 20px 0;
     font-size: 0.8em;
   }
-  
+
   p a, .release a {
     color: #78b432;
   }
@@ -426,7 +426,7 @@
     float: right;
     padding: 8px;
     opacity: .8;
-    
+
     &:hover {
       opacity: 1;
       cursor: pointer;
@@ -442,7 +442,7 @@
   li {
     clear: both;
   }
-  
+
   li .service {
       background: url('/assets/services-bg.jpg') repeat-x 0 0 #78b432;
       height: 235px;
@@ -450,12 +450,12 @@
       position: relative;
       margin: 0 0 20px 0;
   }
-  
+
   li .service .textbox {
     width: 50%;
   }
 
-  
+
 
   li .service span {
     color: #b4f064;
@@ -480,29 +480,29 @@
   li .service .info a, li .service .green-button {
     font-size: 0.75em;
   }
-	
-	li .service h1 {
+
+  li .service h1 {
     text-transform: capitalize;
     font-size: 1.6em;
     font-weight: 400;
     a {
-		color: #fff;
-		text-decoration: none;
-		}
+    color: #fff;
+    text-decoration: none;
+    }
   }
-	
+
   li .service img {
     position: absolute;
     top: 0;
     right: 0;
   }
-  
+
   li .info {
      width: 50%;
     font-size: 0.8em;
     margin: 30px 20px;
   }
-  
+
   li hr {
     width: 50%;
     margin: 0 auto 20px 0;
@@ -515,13 +515,13 @@
   li.odd .service .textbox {
     float: right;
   }
-  
+
   li.odd .service img {
     position: absolute;
     top: 0;
     left: 0;
   }
-  
+
   li.odd .info {
     float: right;
   }
@@ -531,12 +531,12 @@
   margin: 10px 0 10px 0;
   padding-right: 0;
   background: #fff;
-  
+
   li {
     border-bottom: 1px solid #e1dcd2;
     padding: 4px 6px;
   }
-  
+
   li ul {
     border-top: 1px solid #26221a;
     border-bottom: 1px solid #26221a;
@@ -545,7 +545,7 @@
   li ul li {
      padding-left: 3px;
   }
-  
+
   li a {
     text-decoration: none;
     font-size: .8em;
@@ -553,12 +553,12 @@
     padding: 4px;
     font-weight: bold;
   }
-  
+
   a:hover {
     background: #e6f0dc;
     color: #78b432 !important; /* defined as important due to IE7 */
   }
-  
+
   a.current {
     background: #78b432 image-url('/assets/hq/white_arrow_right.png') left no-repeat;
     color: #fff !important; /* defined as important due to IE7 */
@@ -575,7 +575,7 @@
   a {
     text-decoration: none;
   }
-  
+
   .part-title {
     font-size: 1.3em;
     display: block;
@@ -610,13 +610,13 @@
   float: left;
   margin-right: 10px;
   max-width: 415px;
-  
+
   .emphasis {
     font-weight: bold;
     color: #333;
     font-size: 1em;
   }
-  
+
   .bullet-info-box {
     padding: 0 10px;
   }
@@ -649,5 +649,5 @@
 }
 
 #map-footer img {
-	margin: 0;
+  margin: 0;
 }

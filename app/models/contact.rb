@@ -1,6 +1,6 @@
 class Contact
   include ActiveModel::Validations
-	include ActiveModel::Conversion
+  include ActiveModel::Conversion
   extend  ActiveModel::Naming
 
   attr_accessor :name, :contact_number, :email, :message

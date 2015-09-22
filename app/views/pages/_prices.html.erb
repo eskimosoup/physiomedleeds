@@ -1,10 +1,10 @@
 <div id="intro-area">
   <div class="full">
-		<h1><%= @page.title %></h1>
-    
-		<%= raw @page.content %>
-			
-		<hr />
+    <h1><%= @page.title %></h1>
+
+    <%= raw @page.content %>
+
+    <hr />
   </div>
 </div>
 
@@ -12,41 +12,41 @@
 
 <div class="page background no-top-padding">
   <ul class="services">
-		<% @prices.each do |price| %>
-			<li>
-				<div class="service">
-					<div class="textbox">
-						<h1><%= price.title %></h1>
-						
-						<div class="price"><%= simple_format( price.price ) %></div>
-						
-						<%= raw price.content %>
-						
-						<% unless price.show_read_more.blank? %>
-						
-							<a class="green-button" href="/pages/treatments/#<%= price.title.downcase.tr(' ', '_') %>">Read More</a>
-						
-						<% end %>
-						
-					</div>
-					
-					<% unless price.image.blank? %>
-						<%= image_tag price.image.show %>
-					<% end %>
-				</div>
-				
-			</li>
-	<% end %>
-  
+    <% @prices.each do |price| %>
+      <li>
+        <div class="service">
+          <div class="textbox">
+            <h1><%= price.title %></h1>
+
+            <div class="price"><%= simple_format( price.price ) %></div>
+
+            <%= raw price.content %>
+
+            <% unless price.show_read_more.blank? %>
+
+              <a class="green-button" href="/pages/treatments/#<%= price.title.downcase.tr(' ', '_') %>">Read More</a>
+
+            <% end %>
+
+          </div>
+
+          <% unless price.image.blank? %>
+            <%= image_tag price.image.show %>
+          <% end %>
+        </div>
+
+      </li>
+  <% end %>
+
   <div class="middle-inner">
     <p class="left">
       <strong>Want to see how we can help you?</strong> <%= link_to "Get in Touch", new_contact_path, :class =>"green-button" %>
-    </p>      
-    
+    </p>
+
     <div class="right">
       <%= render "shared/social_links" %>
     </div>
-    
+
     <div class="clear"></div>
   </div>
 </div>

@@ -37,8 +37,8 @@ $(document).on("click", ".mobile-area-toggle", function() {
 });
 
 $(document).on("click", ".top", function() {
- 	$('html, body').animate({scrollTop:0}, 'slow');
-	return false;
+   $('html, body').animate({scrollTop:0}, 'slow');
+  return false;
 });
 
 function updateSelect(selectValue) {
@@ -186,7 +186,7 @@ $(document).ready(function() {
   $("#booking_clinic").trigger("change");
 
   $('.colorbox').colorbox({rel:'gal'});
-	$( ".datepicker" ).datepicker({ minDate: 0, dateFormat: "dd MM yy" });
+  $( ".datepicker" ).datepicker({ minDate: 0, dateFormat: "dd MM yy" });
 
   //if (!jQuery.browser.mobile) {
     $('li.contact-right').hover(function() {
@@ -252,24 +252,24 @@ $(document).ready(function() {
 
   // http://www.mkyong.com/jquery/how-to-create-a-tooltips-with-jquery/
   var changeTooltipPosition = function(event) {
-	  var tooltipX = event.pageX - 40;
-	  var tooltipY = event.pageY - 45;
-	  $('div.know-your-body-tooltip').css({top: tooltipY, left: tooltipX});
-	};
+    var tooltipX = event.pageX - 40;
+    var tooltipY = event.pageY - 45;
+    $('div.know-your-body-tooltip').css({top: tooltipY, left: tooltipX});
+  };
 
-	var showTooltip = function(event) {
-	  $('div.tooltip').remove();
-	  $('<div class="know-your-body-tooltip green-header">' + $(this).attr('data-title') + '</div>').appendTo('body');
-	  changeTooltipPosition(event);
-	};
+  var showTooltip = function(event) {
+    $('div.tooltip').remove();
+    $('<div class="know-your-body-tooltip green-header">' + $(this).attr('data-title') + '</div>').appendTo('body');
+    changeTooltipPosition(event);
+  };
 
-	var hideTooltip = function() {
-	   $('div.know-your-body-tooltip').remove();
-	};
+  var hideTooltip = function() {
+     $('div.know-your-body-tooltip').remove();
+  };
 
-	$("#back-body a, #front-body a").bind({
-	   mousemove : changeTooltipPosition,
-	   mouseenter : showTooltip,
-	   mouseleave: hideTooltip
-	});
+  $("#back-body a, #front-body a").bind({
+     mousemove : changeTooltipPosition,
+     mouseenter : showTooltip,
+     mouseleave: hideTooltip
+  });
 });
