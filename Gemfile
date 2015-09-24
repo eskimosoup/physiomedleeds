@@ -22,3 +22,8 @@ gem 'manticore', :git => 'git@github.com:eskimosoup/manticore.git', branch: "rai
 
 gem "jquery-ui-rails"
 gem 'friendly_id', '~> 4.0.10.1'
+
+group :development do
+  gem 'quiet_assets', '~> 1.1.0'
+  gem 'bullet'
+end

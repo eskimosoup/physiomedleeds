@@ -3,7 +3,7 @@
     <%= f.label :layout %><br />
     <%= f.select :layout, Page.layouts.map{ |x| [t(x), x] } %>
   </div>
-  
+
   <div class="field">
     <%= f.label :style %><br />
     <%= f.select :style, Page.styles.map{ |x| [t(x), x] } %>
@@ -12,12 +12,12 @@
 
 <fieldset>
   <legend>Main Content</legend>
-  
+
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
-  
+
   <div class="field">
     <%= f.label :content %><br />
     <%= f.text_area :content, :class => "tinymce" %>
@@ -32,6 +32,12 @@
 
 <fieldset>
   <legend>Settings</legend>
+
+  <% if current_administrator.role == "souper" %>
+    <%= f.fields_for :tracking_code do |builder| %>
+      <%= render "admin/tracking_codes/tracking_code_fields", :f => builder %>
+    <% end %>
+  <% end %>
 
   <div class="field">
     <%= f.label :display %><br />
