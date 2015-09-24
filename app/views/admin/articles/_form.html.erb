@@ -24,9 +24,15 @@
       <%= f.image_field :image, :alt => true %>
     </div>
 
-  <% end -%>  
+  <% end -%>
 
   <%= field_set_tag 'Settings' do -%>
+
+    <% if current_administrator.role == "souper" %>
+      <%= f.fields_for :tracking_code do |builder| %>
+        <%= render "admin/tracking_codes/tracking_code_fields", :f => builder %>
+      <% end %>
+    <% end %>
 
     <div class="field">
       <%= f.label :date %><br />

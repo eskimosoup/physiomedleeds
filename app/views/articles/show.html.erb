@@ -16,7 +16,7 @@
       <% end %>
 
       <h1><%= @article.title %></h1>
-      
+
       <%= raw @article.content %>
 
       <hr />
@@ -59,3 +59,4 @@
   <div class="clear"></div>
 </div>
 
+<%= render @article.tracking_code %>
