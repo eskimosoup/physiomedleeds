@@ -4,9 +4,9 @@
     <%= link_to image_tag('logo.jpg'), root_path %>
 
     <%= image_tag 'tagline.jpg' %>
-    
+
     <div class="clinic-name">Leeds and Guiseley Physiotherapy Clinics</div>
-    
+
     <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
       <div class="header-telephone">
         <%= image_tag "phone.png", alt: "Phone" %> <strong><span class="calltracks_physiotherapyinleedscouk-main"><%= SITE_SETTINGS["Leeds Phone"] %></span></strong>
@@ -20,8 +20,8 @@
     <% unless @navigation.blank? %>
     <ul>
       <% @navigation.each_with_index do |branch, i| %>
-        
-        
+
+
         <% if @navigation.count == (i+3) %>
           <li class="right contact-right">
 
@@ -30,7 +30,7 @@
 
             <% unless SITE_SETTINGS["Leeds Address"].blank? %>
               <p>
-                <strong><%= SITE_SETTINGS["Leeds Address"] %></strong>              
+                <strong><%= SITE_SETTINGS["Leeds Address"] %></strong>
               </p>
             <% end %>
 
@@ -54,11 +54,7 @@
         <% else %>
           <li>
         <% end %>
-          <% if @current_branch and @current_branch.name == branch.name %>
-            <%= link_to branch.name, branch.destination, :class => "active" %>
-          <% else %>
-            <%= link_to branch.name, branch.destination %>
-          <% end %>
+          <%= link_to branch.name, branch.destination, :class => branch_classes(branch) %>
         </li>
       <% end %>
     </ul>
