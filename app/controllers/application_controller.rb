@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
 
   def index
     @articles = Article.where("display = ? AND date <= ?", true, Date.today).order("date DESC").limit(1)
-    @banners = Banner.where(:display => true).order(:position)
+    @banners = static_banners + dynamic_banners 
     static_page = Willow::StaticPage.find_by_name("Home")
     unless static_page.blank? or static_page.branch.blank?
       @current_branch = static_page.branch
@@ -40,6 +40,14 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def dynamic_banners
+    @dynamic_banners ||= Banner.where(display: true).order(:position)
+  end
+
+  def static_banners
+    @static_banners = StaticBanner.build_static_banners
+  end
 
   def nav_menu
     @action_quote = ActionQuote.where(display: true).order("rand()").first
