@@ -5,7 +5,7 @@ class BookingMailer < ActionMailer::Base
 
   def new(booking)
     @booking = booking
-    mail :to => SITE_SETTINGS["Booking Request Email"], :bcc => SITE_SETTINGS["Booking Email CC"], :cc => @booking.email, :subject => "Physio Med Treatment Booking Request"
+    mail :to => SITE_SETTINGS["Booking Request Email"], :bcc => SITE_SETTINGS["Booking Email CC"].split(", "), :cc => @booking.email, :subject => "Physio Med Treatment Booking Request"
   end
 
 end
