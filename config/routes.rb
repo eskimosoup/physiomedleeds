@@ -1,6 +1,6 @@
 PhysiomedLeeds::Application.routes.draw do
 
-  get '/pages/prices' to: redirect('/pages/treatments')
+  get '/pages/prices', to: redirect('/pages/treatments')
   namespace :admin do
     manticore_resources :testimonials
     chronicler_resources :articles
