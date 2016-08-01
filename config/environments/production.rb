@@ -1,11 +1,17 @@
 PhysiomedLeeds::Application.configure do
 
-    config.logger = Logger.new(config.paths['log'].first, 3, 5242880)
+  config.logger = Logger.new(config.paths['log'].first, 3, 5242880)
 
   Rails.application.routes.default_url_options[:host] = "www.physiotherapyinleeds.co.uk"
 
-  ActionMailer::Base.delivery_method = :sendmail
-  ActionMailer::Base.sendmail_settings = { :location => '/usr/lib/sendmail', :arguments => '-i' }
+  config.action_mailer.smtp_settings = { 
+    address: 'mail.optimised.today',
+    authentication: :plain,
+    user_name: 'noreply@optimised.today',
+    password: 'LudoStudio47#!poip',
+    enable_starttls_auto: false
+  }
+  config.action_mailer.delivery_method = :smtp
 
   # Settings specified here will take precedence over those in config/application.rb
 
