@@ -1,6 +1,6 @@
 class BookingMailer < ActionMailer::Base
 
-  default :from => SITE_SETTINGS["Booking Request Email"]
+  default :from => "noreply@optimised.today"
   default :to => SITE_SETTINGS["Booking Request Email"]
 
   def new(booking)
