@@ -18,10 +18,17 @@ class StaticBanner
     banners = []
     banners << StaticBanner.new(image_filename: "mothers_day_banner.jpg",
       title: "Mother's Day", alt: "Mother's Day") if StaticBanner.show_mothers_day_banner?
+    banners << StaticBanner.new(image_filename: "summer_banner.jpg",
+      title: "Book a massage", alt: "Book a massage") if StaticBanner.summer?
     banners
   end
 
   def self.show_mothers_day_banner?
     Date.today < Date.new(2016, 3, 6)
+  end
+
+  def self.summer?
+    year = Date.today.year
+    (Date.new(year, 6, 1)..Date.new(year, 9, 12)).include?(Date.today)
   end
 end
