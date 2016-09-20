@@ -21,7 +21,7 @@
     <%= f.label :clinic, 'Clinic: *' %><br />
     <%= f.select :clinic, ['Physio Med Leeds', 'Physio Med Guiseley'] %>
   </div>
-  
+
   <div class="field">
     <%= f.label :date, 'Date: *' %><br />
     <%= f.text_field :date, :class => "datepicker", :autocomplete => "off" %>
@@ -47,6 +47,6 @@
     <%= f.text_area :message %>
   </div>
   <div class="actions">
-    <%= f.submit "Request Booking" %>
+    <%= f.submit "Request Booking", data: { disable_with: "Please wait..." } %>
   </div>
 <% end %>
