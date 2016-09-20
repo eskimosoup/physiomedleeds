@@ -1,20 +1,23 @@
 PhysiomedLeeds::Application.configure do
-
-  Rails.application.routes.default_url_options[:host] = "192.168.0.41"
-  config.action_mailer.smtp_settings = {:enable_starttls_auto => false}
+  Rails.application.routes.default_url_options[:host] = '192.168.0.41'
+  config.action_mailer.smtp_settings = { enable_starttls_auto: false }
 
   ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {:address => 'mail.eskimosoup.co.uk', :authentication => :plain, :user_name => 'tasks@eskimosoup.co.uk', :password => 'poipoip'}
+  ActionMailer::Base.smtp_settings = {
+    address: 'mail.eskimosoup.co.uk',
+    authentication: :plain,
+    user_name: 'tasks@eskimosoup.co.uk',
+    password: 'poipoip'
+  }
 
   config.generators do |g|
     g.assets false
-    g.stylesheets  false
+    g.stylesheets false
     g.helper false
     g.test_framework false
   end
 
-
-    config.logger = Logger.new(config.paths['log'].first, 3, 5242880)
+  config.logger = Logger.new(config.paths['log'].first, 3, 5_242_880)
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
