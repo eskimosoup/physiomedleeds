@@ -42,8 +42,6 @@ $(document).on("click", ".top", function() {
 });
 
 function updateSelect(selectValue) {
-
-
   $('#booking_time_4i option:not(.out-of-hours)').show();
   /*
   $('#booking_time_4i option').each(function() {
@@ -64,7 +62,7 @@ function updateSelect(selectValue) {
           var day = date.getDay();
           var month = date.getMonth();
           //return [( day == 3 && month == 10), ''];
-          return [( day == 3 ), ''];
+          return [( day == 1 || day == 2 || day == 3 || day == 4 || day == 5), ''];
         }
       });
 
@@ -122,7 +120,11 @@ function updateSelect(selectValue) {
       break;
 
     default:
-      $( ".datepicker" ).datepicker({ minDate: 0, dateFormat: "dd MM yy" });
+      $( ".datepicker" ).datepicker({
+        minDate: 0,
+        dateFormat: "dd MM yy",
+        beforeShowDay: $.datepicker.noWeekends
+      });
   }
 }
 
@@ -132,7 +134,7 @@ $(document).on('change', '#booking_clinic', function() {
   if( selectedText == 'Physio Med Leeds' ) {
     $('#booking_time_4i option').removeClass('out-of-hours').show();
     $('#booking_time_4i option').each(function() {
-      if( parseInt( $(this).val() ) <= 7 || parseInt( $(this).val() ) >= 18 ) {
+      if( parseInt( $(this).val() ) <= 7 || parseInt( $(this).val() ) > 19 ) {
         $(this).addClass('out-of-hours').hide();
       }
     });
@@ -140,7 +142,7 @@ $(document).on('change', '#booking_clinic', function() {
   } else if( selectedText == 'Physio Med Guiseley' )  {
     $('#booking_time_4i option').removeClass('out-of-hours').show();
     $('#booking_time_4i option').each(function() {
-      if( parseInt( $(this).val() ) <= 8 || parseInt( $(this).val() ) >= 19 ) {
+      if( parseInt( $(this).val() ) <= 7 || parseInt( $(this).val() ) > 19 ) {
         $(this).addClass('out-of-hours').hide();
       }
     });
@@ -186,7 +188,7 @@ $(document).ready(function() {
   $("#booking_clinic").trigger("change");
 
   $('.colorbox').colorbox({rel:'gal'});
-  $( ".datepicker" ).datepicker({ minDate: 0, dateFormat: "dd MM yy" });
+  $( ".datepicker" ).datepicker({ minDate: 0, dateFormat: "dd MM yy", beforeShowDay: $.datepicker.noWeekends });
 
   //if (!jQuery.browser.mobile) {
     $('li.contact-right').hover(function() {
