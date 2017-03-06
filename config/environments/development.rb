@@ -1,14 +1,5 @@
 PhysiomedLeeds::Application.configure do
   Rails.application.routes.default_url_options[:host] = '192.168.0.41'
-  config.action_mailer.smtp_settings = { enable_starttls_auto: false }
-
-  ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {
-    address: 'mail.eskimosoup.co.uk',
-    authentication: :plain,
-    user_name: 'tasks@eskimosoup.co.uk',
-    password: 'poipoip'
-  }
 
   config.generators do |g|
     g.assets false

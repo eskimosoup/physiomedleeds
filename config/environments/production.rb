@@ -7,7 +7,7 @@ PhysiomedLeeds::Application.configure do
     address: 'mail.optimised.today',
     authentication: :plain,
     user_name: 'noreply@optimised.today',
-    password: 'LudoStudio47#!poip',
+    password: ENV['NOREPLY_PASSWORD'],
     enable_starttls_auto: false
   }
 
