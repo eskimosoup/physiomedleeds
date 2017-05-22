@@ -9,7 +9,7 @@
     <div class="item-inner">
       <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
       Call us on:
-      <h2><span class="calltracks_physiotherapyinleedscouk-main"><%= SITE_SETTINGS["Leeds Phone"] %></span></h2>
+      <h2><%= calltracks(class: 'calltracks-telephone') %></h2>
       <% end %>
 
       <% unless SITE_SETTINGS["Email"].blank? %>
@@ -20,8 +20,8 @@
 
 <div class="quote">
   <span class="open"></span>
-  
+
   <p>I have just read the latest scores from the survey of users of the physio service you provide to DWP and felt I had to write to congratulate you on the 96% approval rating. - Department for Work &amp; Pensions</p>
-  
+
   <span class="close"></span>
 </div>

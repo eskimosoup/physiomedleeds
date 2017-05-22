@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.22.3'
+gem 'rails', '3.2.22.5'
 gem 'mysql2', '0.3.20'
 
 group :assets do
@@ -12,7 +12,7 @@ end
 
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'capistrano'
+# gem 'capistrano'
 # gem 'debugger'
 
 gem 'informant', git: 'git@github.com:eskimosoup/informant.git', branch: 'rails_3'
@@ -25,5 +25,5 @@ gem 'friendly_id', '~> 4.0.10.1'
 
 group :development do
   gem 'quiet_assets', '~> 1.1.0'
-  gem 'bullet'
+  # gem 'bullet'
 end
