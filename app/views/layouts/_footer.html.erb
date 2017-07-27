@@ -1,9 +1,9 @@
 <% unless @action_quote.blank? %>
 <div class="action-quote">
   <%= image_tag "large-open-quote.png", alt: '', class: "float-left" %>
-  
+
   <p><%= @action_quote.content %></p>
-  
+
   <%= image_tag "large-close-quote.png", alt: '', class: "float-right" %>
 </div>
 <% end %>
@@ -17,7 +17,7 @@
         <%= link_to (image_tag "footer/linkedin.png", :alt => "LinkedIn", :class => "social"), "http://www.linkedin.com/company/physio-med-ltd", :title => "LinkedIn" %>
         <%= link_to (image_tag "footer/facebook.png", :alt => "Facebook", :class => "social"), "https://www.facebook.com/pages/Physio-Med-Limited/1548528155362064", :title => "Facebook" %>
       </div>
-      
+
       <div class="rich-snippets">
         <%= render 'shared/rich_snippets' %>
       </div>
@@ -25,7 +25,7 @@
 
     <div class="right">
       <p>
-        &copy; 2013 Physio Med Limited
+        &copy; <%= Date.today.year %> Physio Med Limited
       </p>
 
       <p>
