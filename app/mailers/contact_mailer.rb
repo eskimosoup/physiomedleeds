@@ -4,7 +4,9 @@ class ContactMailer < ActionMailer::Base
 
   def new(contact)
     @contact = contact
-    mail cc: SITE_SETTINGS['Email CC'], subject: 'Physio Med Clinics Website - Contact form completed'
+    mail cc: SITE_SETTINGS['Email CC'],
+         reply_to: (@contact.email.present? ? @contact.email : SITE_SETTINGS['Email']),
+         subject: 'Physio Med Clinics Website - Contact form completed'
   end
 
   def new_practice_application(practice_application, request)
