@@ -74,7 +74,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
         <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
-          <div class="contact">Tel: <strong><%= calltracks(class: 'calltracks-telephone') %></strong></div>
+          <div class="contact">Tel: <strong><%= calltracks(class: 'calltracks-telephone ga-event', data: { event_category: 'Offline contact', event_action: 'Phone call' }) %></strong></div>
         <% end %>
 
         <div id="leeds-map-canvas" class="map-canvas"></div>

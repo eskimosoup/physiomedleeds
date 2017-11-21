@@ -20,7 +20,7 @@
     <% end %>
 
     <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
-      <div class="contact">Tel: <%= calltracks(class: 'calltracks-telephone') %></div>
+      <div class="contact">Tel: <%= calltracks(class: 'calltracks-telephone ga-event', data: { event_category: 'Offline contact', event_action: 'Phone call' }) %></div>
     <% end %>
 
     <% unless SITE_SETTINGS["Leeds Fax"].blank? %>
