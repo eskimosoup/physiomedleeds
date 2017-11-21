@@ -9,7 +9,7 @@
     <div class="item-inner">
       <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
       Call us on:
-      <h2><%= calltracks(class: 'calltracks-telephone') %></h2>
+      <h2><%= calltracks(class: 'calltracks-telephone ga-event', data: { event_category: 'Offline contact', event_action: 'Phone call' }) %></h2>
       <% end %>
 
       <% unless SITE_SETTINGS["Email"].blank? %>

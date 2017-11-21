@@ -10,7 +10,7 @@
     <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
       <div class="header-telephone">
         <%= image_tag "phone.png", alt: "Phone" %>
-        <strong><%= calltracks(class: 'calltracks-telephone') %></strong>
+        <strong><%= calltracks(class: 'calltracks-telephone ga-event', data: { event_category: 'Offline contact', event_action: 'Phone call' }) %></strong>
       </div>
     <% end %>
   </div>
@@ -37,7 +37,7 @@
 
             <p>
               <% unless SITE_SETTINGS["Leeds Phone"].blank? %>
-                T: <strong><%= calltracks(class: 'calltracks-telephone') %></strong><br />
+                T: <strong><%= calltracks(class: 'calltracks-telephone ga-event', data: { event_category: 'Offline contact', event_action: 'Phone call' }) %></strong><br />
               <% end %>
 
               <% unless SITE_SETTINGS["Leeds Fax"].blank? %>
